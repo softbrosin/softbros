@@ -1,0 +1,50 @@
+/*######################################*/
+/*Colors for the template */
+/*######################################*/
+
+
+body {
+    background-color: white;
+}
+
+.spinner > div,
+.nav-link:hover,
+.nav-link.active,
+.cbp-qtprogress,
+.cta1:hover
+  {
+    background-color: #ff5f0b;
+}
+
+
+
+.about_icon,
+.counter,
+.person_info h5,
+.social_icon:hover,
+.portfolio_item_controls:hover,
+.portfolio_item_tasks ul li:before,
+.services_details h5,
+.cbp-qtrotator blockquote h5,
+.cta1,
+.pricing_box_header h1,
+.news_icon,
+#contact_info3 h2,
+.pagination li a:hover,
+.pagination a.active,
+.comment a:hover 
+{
+    color: #ff5f0b;
+}
+
+
+.cta1 {
+    border-color: #ff5f0b;
+}
+.cta1:hover {
+    color:white;
+}
+
+.nav-link:hover, .nav-link.active {
+    border:solid 3px #ff5f0b;
+}
