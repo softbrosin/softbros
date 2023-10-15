@@ -1,0 +1,97 @@
+.container { 
+  max-width: 500px; 
+  margin: auto; 
+
+} 
+* {
+  animation: smoothopen .4s;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container h1 { 
+  color: #363636; 
+} 
+
+.section { 
+  border: none;
+} 
+
+#my-qr-reader__scan_region {
+  background-image: url(asset/tenor.gif);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#my-qr-reader__scan_region img {
+  display: none;
+}
+
+#my-qr-reader { 
+  padding: 0 !important; 
+  border: 0 !important; 
+  border-radius: 8px; 
+} 
+
+#my-qr-reader img[alt="Info icon"] { 
+  display: none; 
+} 
+
+#my-qr-reader img[alt="Camera based scan"] { 
+  width: 100px !important; 
+  height: 100px !important; 
+} 
+
+button { 
+  padding: 10px 20px; 
+  border: 1px solid #b2b2b2; 
+  outline: none; 
+  border-radius: 18px; 
+  color: white; 
+  font-size: 18px; 
+  cursor: pointer; 
+  margin-top: 15px; 
+  margin-bottom: 10px; 
+  background-image: linear-gradient(45deg,#ed0029,blue); 
+  transition: 0.3s background-color; 
+} 
+
+button:hover { 
+  background-color: #008000; 
+} 
+
+#html5-qrcode-anchor-scan-type-change { 
+  text-decoration: none !important; 
+  color: #1d9bf0; 
+} 
+
+video { 
+  width: 60% !important; 
+  margin: auto;
+  border: none !important; 
+  border-radius: 10px; 
+  animation: smoothopen .4s;
+}
+@keyframes smoothopen {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+#my-qr-reader__dashboard_section div:last-child {
+  display: none;
+}
+
+#pigmy-act-no {
+  max-width: 240px;
+  margin: auto;
+}
+
+#pigmy-act-no input {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-bottom: 2px solid rgb(20, 0, 26);
+  font-size: 20px;
+  text-align: center;
+}
