@@ -3,8 +3,10 @@ function domReady(fn) {
         document.readyState === "complete" ||
         document.readyState === "interactive"
     ) {
-        setTimeout(fn, 1000);
+    alert('ready')
+        setTimeout(fn, 3000);
     } else {
+        alert('ready2')
         document.addEventListener("DOMContentLoaded", fn);
     }
 }
