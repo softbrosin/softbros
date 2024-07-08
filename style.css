@@ -416,7 +416,7 @@ footer .brand_logo {
     display: flex;
     gap: 10px;
     justify-content: left;
-    height: fit-content;
+    height: -webkit-fill-available;
 }
 
 footer .country-made {
@@ -435,7 +435,7 @@ footer .brand_logo img {
     width: 30px;
     padding: 6px;
     border-radius: 10px;
-    height: fit-content;
+    height: -webkit-fill-available;
     background-color: #fff;
 }
 
