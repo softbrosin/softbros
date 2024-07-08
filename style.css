@@ -440,6 +440,7 @@ footer .brand_logo img {
     padding: 6px;
     border-radius: 10px;
     height: -webkit-fill-available;
+    height: intrinsic;
     background-color: #fff;
 }
 
