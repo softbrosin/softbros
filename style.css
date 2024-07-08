@@ -194,9 +194,9 @@ h1 {
     background: linear-gradient(0deg, #000000 15%, rgba(119, 119, 119, 0.2) 75%, transparent);
 }
 
-.hero .container img {
-    width: 260px;
+.hero .container video {
     height: auto;
+    width: 100%;
 }
 
 .hero .container h1 {
@@ -219,6 +219,11 @@ h1 {
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 2px;
+}
+
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;
 }
 
 .content_container.products .container {
@@ -456,6 +461,7 @@ footer .brand_logo h4 {
         scale: .4;
         opacity: 0;
     }
+
     to {
         scale: 1;
         opacity: 1;
@@ -466,21 +472,27 @@ footer .brand_logo h4 {
     .content_container {
         padding: 0;
     }
+
     h1 {
         font-size: 24px;
     }
+
     .thoughts {
         margin-top: 110px;
     }
+
     .milestone {
         margin: 120px 20px;
     }
+
     .milestone p {
         font-size: 16px;
     }
+
     ul {
         font-size: 20px;
     }
+
     h2 {
         color: #e4e4e4;
         font-size: 38px;
@@ -492,43 +504,54 @@ footer .brand_logo h4 {
         letter-spacing: unset;
         margin: 20px auto 20px;
     }
+
     .thoughts h2 {
         font-size: 42px;
     }
+
     .content {
         margin: 0 20px;
         text-align: center;
     }
+
     .img-wrapper::after {
         border-radius: 10px;
         transform: translateY(-10px);
     }
+
     .content_container.products img {
         transform: translateY(-10px);
         border-radius: 10px;
     }
+
     .content_container.products .container {
         padding: 20px 20px 60px;
     }
+
     .content_container.products .product-title {
         margin-bottom: 80px;
     }
+
     .keys {
         flex-direction: column;
         gap: 0;
     }
+
     .content_container.products p {
         font-size: 16px;
         line-height: 30px;
     }
+
     footer .wrapper .container {
         flex-direction: column;
     }
+
     footer .country-made {
         position: unset;
         margin: 0;
         padding-top: 10px;
     }
+
     footer .contact {
         margin-top: 40px;
     }
