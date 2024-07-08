@@ -301,8 +301,12 @@ video::-webkit-media-controls-panel {
     -webkit-text-fill-color: transparent;
 }
 
+.keypoints {
+    margin: 60px 0;
+}
+
 .keypoints h3 {
-    font-size: 20px;
+    font-size: 26px;
     line-height: 32px;
 }
 
