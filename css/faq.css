@@ -1,0 +1,48 @@
+.faq-container .image-container img {
+    max-width: 680px;
+    width: auto;
+    border-radius: 12px;
+    height: auto;
+    border: 1.2px solid var(--primary-color-lite);
+}
+
+.faq-container .faq-title h2 {
+    margin: 40px 0;
+}
+
+.faq {
+    border-bottom: 2px dashed var(--black);
+    margin-bottom: 80px;
+}
+
+.faq-container .solution-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.faq-title {
+    cursor: pointer;
+}
+
+.faq-title h2 strong {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.faq-container .faq-content {
+    height: 0;
+    visibility: hidden;
+}
+
+.faq-container .faq-content.active {
+    height: fit-content;
+    height: max-content;
+    visibility: unset;
+    padding-top: 20px;
+}
+
+.faq-container .solution-content .text-container p {
+    margin: 0;
+}

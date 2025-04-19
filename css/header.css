@@ -23,7 +23,7 @@ header .nav {
 }
 
 header .make-brand {
-    background-color: #373737;
+    background-color: #000000;
     border-radius: 38px;
     padding: 0;
     width: fit-content;
@@ -44,10 +44,10 @@ header .make-brand p {
 header .make-brand img {
     border-radius: 50px;
     padding: 4px;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border: 1px solid #363636;
+    width: 22px;
+    height: 22px;
+    background-color: var(--white);
+    transform: translateX(1px);
 }
 
 header .nav-links {
@@ -56,12 +56,12 @@ header .nav-links {
 }
 
 header .nav-links a {
-    color: #ebebeb;
+    color: var(--font-color);
     font-weight: 600;
 }
 
 header .nav-links a:hover {
-    color: #fff;
+    color: var(--font-color-highlight);
 }
 
 .hamburger {
@@ -72,6 +72,7 @@ header .nav-links a:hover {
     .hamburger {
         display: block;
     }
+
     header .nav-links {
         position: absolute;
         flex-direction: column;
@@ -79,11 +80,17 @@ header .nav-links a:hover {
         top: 70px;
         padding: 20px;
         display: none;
-        background-color: #000000de;
+        background-color: var(--primary-color);
     }
+
     header .nav-links.active {
         display: flex;
     }
+
+    .hero .content {
+        padding: 20px;
+    }
+
     .hamburger button {
         border: none;
         background: none;
@@ -92,6 +99,7 @@ header .nav-links a:hover {
         cursor: pointer;
         font-family: inherit;
     }
+
     /* ============================ */
     /* <style for bg> ======== */
     .background {
@@ -102,12 +110,14 @@ header .nav-links a:hover {
         justify-content: center;
         align-items: center;
     }
+
     /* <style for menu__icon> ======== */
     .menu__icon {
         width: 22px;
         height: 22px;
         padding: 4px;
     }
+
     .menu__icon span {
         display: block;
         width: 100%;
@@ -118,102 +128,127 @@ header .nav-links a:hover {
         transition: background-color .4s;
         position: relative;
     }
+
     header .wrapper {
         padding: 20px;
     }
+
     .menu__icon span+span {
         margin-top: .375rem;
     }
+
     .menu__icon span:nth-child(1) {
         animation: ease .8s menu-icon-top-2 forwards;
     }
+
     .menu__icon span:nth-child(2) {
         animation: ease .8s menu-icon-scaled-2 forwards;
     }
+
     .menu__icon span:nth-child(3) {
         animation: ease .8s menu-icon-bottom-2 forwards;
     }
+
     .menu__icon.active span:nth-child(1) {
         animation: ease .8s menu-icon-top forwards;
     }
+
     .menu__icon.active span:nth-child(2) {
         animation: ease .8s menu-icon-scaled forwards;
     }
+
     .menu__icon.active span:nth-child(3) {
         animation: ease .8s menu-icon-bottom forwards;
         background-color: rgb(255, 59, 48);
     }
+
     @keyframes menu-icon-top {
         0% {
             top: 0;
             transform: rotate(0);
         }
+
         50% {
             top: .5rem;
             transform: rotate(0);
         }
+
         100% {
             top: .5rem;
             transform: rotate(45deg);
         }
     }
+
     @keyframes menu-icon-top-2 {
         0% {
             top: .5rem;
             transform: rotate(45deg);
         }
+
         50% {
             top: .5rem;
             transform: rotate(0);
         }
+
         100% {
             top: 0;
             transform: rotate(0);
         }
     }
+
     @keyframes menu-icon-bottom {
         0% {
             bottom: 0;
             transform: rotate(0);
         }
+
         50% {
             bottom: .5rem;
             transform: rotate(0);
         }
+
         100% {
             bottom: .5rem;
             transform: rotate(135deg);
         }
     }
+
     @keyframes menu-icon-bottom-2 {
         0% {
             bottom: .5rem;
             transform: rotate(135deg);
         }
+
         50% {
             bottom: .5rem;
             transform: rotate(0);
         }
+
         100% {
             bottom: 0;
             transform: rotate(0);
         }
     }
+
     @keyframes menu-icon-scaled {
         50% {
             transform: scale(0);
         }
+
         100% {
             transform: scale(0);
         }
     }
+
     @keyframes menu-icon-scaled-2 {
         0% {
             transform: scale(0);
         }
+
         50% {
             transform: scale(0);
         }
+
         100% {
             transform: scale(1);
         }
