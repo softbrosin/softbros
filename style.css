@@ -366,10 +366,6 @@ video::-webkit-media-controls-panel {
     z-index: 5555;
 }
 
-.keypoints {
-    padding: 40px 40px 80px;
-}
-
 .keypoints h3 {
     font-size: 26px;
     line-height: 32px;
@@ -530,7 +526,7 @@ footer .brand_logo h4 {
 
 @media (max-width: 900px) {
     .content_container {
-        padding: 0;
+        padding: 20px;
     }
 
     .img-wrapper::after {
