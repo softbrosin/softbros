@@ -14,7 +14,7 @@ main.addEventListener('click', () => {
 
 
 // reveal
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.reveal');
 
     const observer = new IntersectionObserver(entries => {
@@ -34,10 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Back-top-top
-
-const header = document.querySelector('header');
-
-function scrollup() {
-    header.scrollIntoView();
-}
+document.querySelectorAll('.faq').forEach((faq) => {
+    faq.querySelector('.faq-title').addEventListener('click', () => {
+        faq.querySelector('.faq-content').classList.toggle('active')
+    });
+})
