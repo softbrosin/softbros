@@ -493,6 +493,7 @@ footer .brand_logo img {
     border-radius: 10px;
     height: -webkit-fill-available;
     height: intrinsic;
+    max-height: 35px;
     background-color: var(--white);
 }
 
