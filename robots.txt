@@ -1,1 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /recovery/
+
 Sitemap: https://softbros.in/sitemap.xml

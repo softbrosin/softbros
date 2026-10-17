@@ -4,186 +4,603 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="canonical" href="https://softbros.in/">
+
     <meta name="description"
-        content="Softbros offers customized billing and finance software solutions designed to meet your specific needs. Pay only for the features you use, with no extra charges for unnecessary options. Enhance your business efficiency with our user-friendly software, trusted by a growing customer base. Contact us for a demo today!">
+        content="Softbros delivers secure business software across India: Cluvana Club OS, BillApp Retail POS, and Pigmy Daily Collection. Pay only for what you use.">
     <meta name="keywords"
-        content="Softbros, billing software, finance software, customized software solutions, user-friendly billing software, digital finance solutions, inventory management, customer notifications, controlled user permissions, WhatsApp integration billing">
+        content="Softbros, Cluvana club management, club software, hospitality management software, retail billing software, pigmy collection software, gymkhana software India, POS thermal printing, customized software solutions, daily deposit app">
     <meta name="author" content="Softbros">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Softbros - Customized Billing and Finance Software Solutions">
+
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:title" content="Softbros | Business Software, Retail Billing & Club OS">
     <meta property="og:description"
-        content="Discover Softbros' advanced billing and finance software, tailored to meet your needs. Pay only for the features you use and enhance your business efficiency.">
+        content="Softbros delivers secure business software across India: Cluvana Club OS, BillApp Retail POS, and Pigmy Daily Collection. Pay only for what you use.">
     <meta property="og:image" content="https://softbros.in/images/favicon.jpg">
     <meta property="og:url" content="https://softbros.in/">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Softbros | Business Software, Retail Billing & Club OS">
+    <meta name="twitter:description" content="Softbros delivers secure business software across India: Cluvana Club OS, BillApp Retail POS, and Pigmy Daily Collection.">
+    <meta name="twitter:image" content="https://softbros.in/images/favicon.jpg">
+
     <link rel="icon" href="/images/favicon.jpg" type="image/x-icon">
-    <title>Softbros - Customized Billing and Finance Software Solutions</title>
+    <title>Softbros | Business Software, Retail Billing & Club OS</title>
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/css/header.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://softbros.in/#organization",
+          "name": "Softbros",
+          "url": "https://softbros.in/",
+          "logo": "https://softbros.in/images/logo.png",
+          "image": "https://softbros.in/images/favicon.jpg",
+          "description": "High-concurrency business software solutions across India, specializing in club management systems, retail billing POS, and pigmy daily collection suites.",
+          "telephone": "+91-8431027977",
+          "email": "communication.softbros@outlook.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jayanagar",
+            "addressLocality": "Hassan",
+            "postalCode": "573201",
+            "addressRegion": "Karnataka",
+            "addressCountry": "IN"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://softbros.in/#website",
+          "url": "https://softbros.in/",
+          "name": "Softbros",
+          "publisher": {
+            "@id": "https://softbros.in/#organization"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
-    <header>
-        <div class="wrapper">
-            <div class="container">
-                <div class="nav">
-                    <div class="nav-brand">
-                        <a href="/">
-                            <div class="make-brand">
-                                <p>Softbros</p>
-                                <img src="/images/logo.png" alt="Softbros logo" aria-label="Softbros logo">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="hamburger">
-                        <div class="background">
-                            <button class="menu__icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="nav-links">
-                        <a href="#products">Products</a>
-                        <a href="#milestone">Milestone</a>
-                        <a href="/billapp">Billing Application</a>
-                        <a href="#contact">Contact us</a>
-                    </div>
-                </div>
+    <!-- Top Site Navigation (64px Height, Deep Dark Theme per PDF spec) -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-brand-group">
+                <a href="/" class="nav-brand-logo" aria-label="Softbros Home">
+                    <img src="/images/logo.png" alt="Softbros Logo" style="width: 32px; height: 32px; border-radius: 6px; background: #FFFFFF; padding: 2px;">
+                    <div class="nav-brand-title">Softbros<span>.</span></div>
+                </a>
             </div>
+
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="#about" class="nav-link">About Company</a>
+                <a href="#products" class="nav-link">Our Products</a>
+                <a href="#milestone" class="nav-link">Milestones</a>
+                <a href="#motive" class="nav-link">Philosophy</a>
+                <a href="#contact" class="nav-link">Contact Us</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#products" class="btn-primary" id="header-cta-btn">View Products</a>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+            <a href="#about" class="nav-link">About Company</a>
+            <a href="#products" class="nav-link">Our Products</a>
+            <a href="#milestone" class="nav-link">Milestones</a>
+            <a href="#motive" class="nav-link">Philosophy</a>
+            <a href="/cluvana/" class="nav-link">Cluvana Hospitality</a>
+            <a href="/billapp/" class="nav-link">Billing Application</a>
+            <a href="/finance/" class="nav-link">Pigmy Application</a>
+            <a href="#contact" class="btn-primary">Contact Us</a>
         </div>
     </header>
+
     <main>
-        <div class="hero">
-            <div class="container">
-            </div>
-            <div class="content">
-                <h1>Innovative Business Solutions | Taking our local business to the digital world</h1>
-                <p>Elevating our local businesses to a premium level with simple, powerful, and advanced features.</p>
-            </div>
-        </div>
+        <!-- Hero Section (Minimum 60vh per spec, Animated abstract green geometric lines in background) -->
+        <section class="hero-section" id="hero">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
 
-        <div class="content_container products reveal" id="products">
-            <div class="products-container">
-                <h2 class="gradient-color mario center title">Our Products</h2>
-                <div class="products-buttons">
-                    <a href="/billapp"><span>Billing Software</span></a>
-                    <a href="/finance"><span>Finance Software</span></a>
+            <div class="container hero-content">
+
+                <div class="logo-badge-container">
+                    <span class="gradient-color">Made in India</span>
                 </div>
-            </div>
-            <div class="container">
-                <div class="video-wrapper">
-                    <video class="background-video" loop="true" autoplay="autoplay" muted>
-                        <source src="/video/bams.mp4" type="video/mp4" />
-                    </video>
-                    <!-- <img src="/images/billingapp.jpg" alt="Billing app image"> -->
+
+                <h1 class="hero-title">
+                    Enterprise Software for <span class="highlight gradient-color">Clubs, Retail Billing & Pigmy Finance</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Elevating our local businesses to a premium level with simple, powerful, and advanced features. Pay only for the features you use, with no extra charges for unnecessary options.
+                </p>
+
+                <!-- Primary and Secondary buttons inline per PDF spec -->
+                <div class="btn-group">
+                    <a href="#products" class="btn-primary" id="hero-primary-cta">
+                        Explore Our Products
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#milestone" class="btn-secondary" id="hero-secondary-cta">
+                        Our Milestones
+                    </a>
                 </div>
-                <div class="keypoints">
-                    <h3>Key Features of Our Billing Software</h3>
-                    <div class="keys">
-                        <ul>
-                            <li>Official Billing Format Invoice</li>
-                            <li>WhatsApp Integration</li>
-                            <li>Stock Management</li>
-                            <li>Stock Left Indicator</li>
-                            <li>Owner and Staff Permissions</li>
-                        </ul>
-                        <ul>
-                            <li>Customer Notifications</li>
-                            <li>Controlled User Permission Access</li>
-                            <li>Comprehensive Billing for Any Product</li>
-                            <li>Add and Sell Products with Barcode Entry</li>
-                            <li>Daily backups</li>
-                        </ul>
+
+                <!-- Mobile APP -->
+                 <div id="mobile-app" style="margin-top: 60px;">
+                    <div class="container">
+                        <div class="section-header">
+                            <div class="section-badge">Mobile App</div>
+                            <div>
+                            <a href="https://play.google.com/store/apps/details?id=com.softbros.finance&pcampaignid=web_share"><span><img width="80" style="border-radius: 12px;" src="/images/decorative/softbros_aio_app.webp" alt="Download Softbros All In One Business App"><h4 class="gradient-color-2">All In One</h4> <img src="/images/decorative/google_play_logo.png" alt="Google Play Store Badge" width="15"> Download App</span></a>
+                            </div>
+                            <p class="section-desc" style="margin-top: 40px">
+                                An all‑in‑one business app designed for local enterprises to securely connect with customers, deliver seamless experiences, and grow loyalty enter your instance ID once, and the app runs smoothly to power your business every day.
+                            </p>
+                        </div>
                     </div>
-                    <p>Our cutting-edge billing software offers a suite of features designed to simplify and enhance
-                        your business operations. From official billing formats to real-time inventory management,
-                        discover how our software can transform your business.</p>
+                 </div>
 
-                    <a class="button marginTop"
-                        href="/billapp"><span>Explore
-                            more</span></a>
+                <!-- Stats Strip -->
+                <div class="hero-stats-strip">
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-value">2023</div>
+                        <div class="hero-stat-label">Inception & Rapid Growth</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-value">3+</div>
+                        <div class="hero-stat-label">Flagship Software Solutions</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-value">100%</div>
+                        <div class="hero-stat-label">Customized to Your Needs</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-value">Zero</div>
+                        <div class="hero-stat-label">Unnecessary Feature Charges</div>
+                    </div>
+                </div>
+                <!-- Softbros Brand Visual Badge with animatedLogo.gif & logo.png -->
+                <div class="hero-brand-visual">
+                    <img src="/images/softbros_reveal.gif" width="290" height="auto" alt="Softbros Business Software Engineering Logo" class="hero-animated-logo">
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="content_container thoughts reveal">
+        <!-- Social Proof Section (Grayscale logos fading in on scroll via IntersectionObserver) -->
+        <section class="social-proof-section" id="social-proof">
             <div class="container">
-                <h2 class="gradient-color darken motive">
-                    We build software not for money, but to fund new software.
-                </h2>
+                <h3 class="social-proof-title">Trusted by Growing Businesses, Retailers, and Private Clubs Across India</h3>
+                <div class="logos-grid">
+                    <div class="marquee-container">
+                        <div class="marquee">
+                            <div class="marquee-group">
+                                <img src="/images/clients/client_8855.png" alt="Softbros Hospitality & Club Client Partner">
+                                <img src="/images/clients/client_6558.png" alt="Softbros Retail POS Client Partner">
+                                <img src="/images/clients/client_9988.png" alt="Softbros Commercial Billing Client Partner">
+                                <img src="/images/clients/client_9954.png" alt="Softbros Enterprise Client Partner">
+                                <img src="/images/clients/client_1123.jpeg" alt="Softbros Financial Co-operative Client Partner">
+                                <img src="/images/clients/client_8563.png" alt="Softbros Wholesale Client Partner">
+                                <img src="/images/clients/client_8985.jpeg" alt="Softbros Supermarket Client Partner">
+                                <img src="/images/clients/client_9985.png" alt="Softbros Sports Club Client Partner">
+                                <span class="marquee-tag">& more</span>
+                            </div>
+                            <div class="marquee-group" aria-hidden="true">
+                                <img src="/images/clients/client_8855.png" alt="Softbros Hospitality & Club Client Partner">
+                                <img src="/images/clients/client_6558.png" alt="Softbros Retail POS Client Partner">
+                                <img src="/images/clients/client_9988.png" alt="Softbros Commercial Billing Client Partner">
+                                <img src="/images/clients/client_9954.png" alt="Softbros Enterprise Client Partner">
+                                <img src="/images/clients/client_1123.jpeg" alt="Softbros Financial Co-operative Client Partner">
+                                <img src="/images/clients/client_8563.png" alt="Softbros Wholesale Client Partner">
+                                <img src="/images/clients/client_8985.jpeg" alt="Softbros Supermarket Client Partner">
+                                <img src="/images/clients/client_9985.png" alt="Softbros Sports Club Client Partner">
+                                <span class="marquee-tag">& more</span>
+                            </div>
+                            <div class="marquee-group" aria-hidden="true">
+                                <img src="/images/clients/client_8855.png" alt="Softbros Hospitality & Club Client Partner">
+                                <img src="/images/clients/client_6558.png" alt="Softbros Retail POS Client Partner">
+                                <img src="/images/clients/client_9988.png" alt="Softbros Commercial Billing Client Partner">
+                                <img src="/images/clients/client_9954.png" alt="Softbros Enterprise Client Partner">
+                                <img src="/images/clients/client_1123.jpeg" alt="Softbros Financial Co-operative Client Partner">
+                                <img src="/images/clients/client_8563.png" alt="Softbros Wholesale Client Partner">
+                                <img src="/images/clients/client_8985.jpeg" alt="Softbros Supermarket Client Partner">
+                                <img src="/images/clients/client_9985.png" alt="Softbros Sports Club Client Partner">
+                                <span class="marquee-tag">& more</span>
+                            </div>
+                            <div class="marquee-group" aria-hidden="true">
+                                <img src="/images/clients/client_8855.png" alt="Softbros Hospitality & Club Client Partner">
+                                <img src="/images/clients/client_6558.png" alt="Softbros Retail POS Client Partner">
+                                <img src="/images/clients/client_9988.png" alt="Softbros Commercial Billing Client Partner">
+                                <img src="/images/clients/client_9954.png" alt="Softbros Enterprise Client Partner">
+                                <img src="/images/clients/client_1123.jpeg" alt="Softbros Financial Co-operative Client Partner">
+                                <img src="/images/clients/client_8563.png" alt="Softbros Wholesale Client Partner">
+                                <img src="/images/clients/client_8985.jpeg" alt="Softbros Supermarket Client Partner">
+                                <img src="/images/clients/client_9985.png" alt="Softbros Sports Club Client Partner">
+                                <span class="marquee-tag">& more</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="content_container milestone reveal" id="milestone">
+        <!-- Company Motive Callout 1 -->
+        <section class="section-wrapper" id="about" style="padding-bottom: 0;">
             <div class="container">
-                <h3 class="gradient-color candy">Our milestone</h3>
-                <div class="step">
-                    <p><span>1</span></p>
-                    <p>We are proud to have achieved significant milestones since our inception in 2023, including the
-                        successful development of two software solutions within our first year. Our rapid progress
-                        underscores our commitment to innovation and
-                        excellence.
+                <div class="motive-banner">
+                    <div class="section-badge">Our Driving Belief</div>
+                    <h2 class="motive-quote gradient-color-2">
+                        "We build software not for money, but to fund new software."
+                    </h2>
+                    <p class="motive-desc">
+                        Our commitment is rooted in pure engineering and product excellence. Every solution we release is designed to empower local Indian enterprises with technology that was previously reserved for giant corporations.
                     </p>
-                </div>
-                <div class="step">
-                    <p><span>2</span></p>
-                    <p>Our customers express satisfaction with our software due to its user-friendly interface,
-                        resulting in an increasing customer base..
-                    </p>
-                </div>
-                <div class="step">
-                    <p><span>3</span></p>
-                    <p>Our goal for 2024 is to expand our reach and market presence through strategic marketing
-                        initiatives aimed at fostering growth within our industry.
-                    </p>
-                </div>
-                <div class="step">
-                    <p><span>4</span></p>
-                    <p>We plan to release a brand new finance software this year, designed to replace traditional
-                        paper-based finance methods with digital solutions</p>
-                </div>
-                <div class="step">
-                    <p><span>5</span></p>
-                    <p>Next year, we are expanding our capital to open a new office, fostering growth, collaboration,
-                        and a strong company culture.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="content_container thoughts reveal">
-            <div class="container gradient-color darken">
-                <h2 class="motive">Pay only for what you use—no extra charges for unnecessary options.</h2>
-                <p>We customize our software to meet your specific requirements, ensuring you pay only for the features
-                    you need, without unnecessary options.</p>
+        <!-- Product Showcase Section ("Our Products") -->
+        <!-- 3 Flagship Products: Cluvana Hospitality, Pigmy Application, Billing Application -->
+        <section class="section-wrapper" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Flagship Software Suite</div>
+                    <h2 class="section-title gradient-color">Our Products</h2>
+                    <p class="section-subtitle">
+                        Purpose-built digital software products created by Softbros. Click any product to explore its dedicated info page, architecture, and live capabilities.
+                    </p>
+                </div>
+
+                <div class="products-showcase-grid">
+                    <!-- Product 1: Cluvana Hospitality Application -->
+                    <div class="product-showcase-card">
+                        <div>
+                            <span class="product-card-badge">Hospitality & Club Operations</span>
+                            <h3 class="product-card-title">Cluvana Hospitality Application</h3>
+                            <p class="product-card-desc">
+                                All-in-one digital system designed to run all day-to-day operations of private clubs, gymkhanas, hotels, and sports associations. Connects members, floor staff, kitchen line, and office management into a synchronized cloud platform.
+                            </p>
+
+                            <!-- Feature Pills -->
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: var(--space-24);">
+                                <span class="status-badge success">Member Dedicated App</span>
+                                <span class="status-badge success">Live Kitchen KDS</span>
+                                <span class="status-badge success">Table Buzzer</span>
+                                <span class="status-badge success">Event Scheduler</span>
+                                <span class="status-badge success">Search nearby affiliated clubs</span>
+                                <span class="status-badge neutral">Guest Rooms Booking</span>
+                                <span class="status-badge neutral">Sports Subscription & Court Booking</span>
+                                <span class="status-badge neutral">Member Dues Ledger</span>
+                                <span class="status-badge neutral">Centralized Billing</span>
+                                <span class="status-badge neutral">Staff Payroll (PF/ESI)</span>
+                                <span class="status-badge neutral">Direct ESC/POS</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="/cluvana/" class="btn-primary" style="width: 100%;">
+                                Open Cluvana Platform Info →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: Pigmy Application (Finance) -->
+                    <div class="product-showcase-card">
+                        <div>
+                            <span class="product-card-badge">Daily Finance & Micro-Deposits</span>
+                            <h3 class="product-card-title">Pigmy Application</h3>
+                            <p class="product-card-desc">
+                                Built to replace traditional paper-based finance methods with transparent digital solutions. Features daily pigmy deposit collection tracking, digital party credit passbooks, instant WhatsApp payment receipts, and automated daily cash reconciliation.
+                            </p>
+
+                            <!-- Feature Pills -->
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: var(--space-24);">
+                                <span class="status-badge success">Daily Pigmy Collection</span>
+                                <span class="status-badge success">App Notification</span>
+                                <span class="status-badge neutral">Digital Passbooks</span>
+                                <span class="status-badge neutral">Mobile app for customers</span>
+                                <span class="status-badge neutral">Agent Route Tracking</span>
+                                <span class="status-badge neutral">Daily Cash Audit</span>
+                                <span class="status-badge neutral">Paperless Receipts</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="/finance/" class="btn-primary" style="width: 100%;">
+                                Open Pigmy Application Info →
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Product 3: Billing Application -->
+                    <div class="product-showcase-card">
+                        <div>
+                            <span class="product-card-badge">Commercial Retail & POS</span>
+                            <h3 class="product-card-title">Billing Application</h3>
+                            <p class="product-card-desc">
+                                Smart commercial billing software built for retail shops and businesses to save time and stay organized. Features official GST invoice formats, barcode scanning, stock left indicators, and WhatsApp bill delivery.
+                            </p>
+
+                            <!-- Existing Media Asset: Video/Image Preview -->
+                            <div class="product-media-preview">
+                                <video loop autoplay muted playsinline poster="/images/billingapp.jpg">
+                                    <source src="/video/bams.mp4" type="video/mp4" />
+                                    <img src="/images/billingapp.jpg" alt="Softbros Commercial Billing & POS Software Dashboard Preview">
+                                </video>
+                            </div>
+
+                            <!-- Feature Pills -->
+                            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: var(--space-24);">
+                                <span class="status-badge success">Official Invoices</span>
+                                <span class="status-badge success">WhatsApp Integration</span>
+                                <span class="status-badge neutral">Stock Left Indicator</span>
+                                <span class="status-badge neutral">Barcode Entry</span>
+                                <span class="status-badge neutral">Role Permissions</span>
+                                <span class="status-badge neutral">Daily Cloud Backups</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="/billapp/" class="btn-primary" style="width: 100%;">
+                                Open Billing Application Info →
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Company Motive Callout 2 (Pay only for what you use) -->
+        <section class="section-wrapper" id="motive" style="padding-top: 0;">
+            <div class="container">
+                <div class="motive-banner" style="background: var(--surface-1); border-color: rgba(0, 200, 83, 0.3);">
+                    <div class="section-badge">Value Guarantee</div>
+                    <h2 class="motive-quote gradient-color-2">
+                        "Pay only for what you use no extra charges for unnecessary options."
+                    </h2>
+                    <p class="motive-desc">
+                        We customize our software to meet your specific business requirements, ensuring you pay only for the features you need, without bloated licenses or unnecessary complexity.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Milestones Section (From Existing Home Page) -->
+        <section class="section-wrapper" id="milestone" style="background-color: var(--surface-2); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Company Journey</div>
+                    <h2 class="section-title gradient-color-2">Our Milestone</h2>
+                    <p class="section-subtitle">
+                        Tracking our journey of rapid innovation and dedicated service since inception in 2023.
+                    </p>
+                </div>
+
+                <div class="milestones-timeline">
+                    <!-- Step 1 -->
+                    <div class="milestone-step-card">
+                        <div class="milestone-num-badge">1</div>
+                        <div class="milestone-step-content">
+                            <h4>Inception & Dual Software Launch (2023)</h4>
+                            <p>
+                                We are proud to have achieved significant milestones since our inception in 2023, including the successful development of two software solutions within our first year. Our rapid progress underscores our commitment to innovation and excellence.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="milestone-step-card">
+                        <div class="milestone-num-badge">2</div>
+                        <div class="milestone-step-content">
+                            <h4>High Customer Satisfaction & User Experience</h4>
+                            <p>
+                                Our customers express satisfaction with our software due to its user-friendly interface, resulting in an increasing customer base across our region.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="milestone-step-card">
+                        <div class="milestone-num-badge">3</div>
+                        <div class="milestone-step-content">
+                            <h4>Market Expansion</h4>
+                            <p>
+                                Our goal for 2027 is to expand our reach and market presence through strategic marketing initiatives aimed at fostering growth within our industry.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="milestone-step-card">
+                        <div class="milestone-num-badge">4</div>
+                        <div class="milestone-step-content">
+                            <h4>Brand-New Digital Finance & Club Hospitality Software Release</h4>
+                            <p>
+                                We plan to release a brand new finance & club hospitality software this year, designed to replace traditional paper-based finance methods with digital solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="milestone-step-card">
+                        <div class="milestone-num-badge">5</div>
+                        <div class="milestone-step-content">
+                            <h4>Capital Expansion & New Office</h4>
+                            <p>
+                                Next year, we are expanding our capital to open a new office, fostering growth, collaboration, and a strong company culture.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section ("Contact us") -->
+        <!-- Form Inputs strictly adhering to: #0B0B0B background, #2E2E2E border, 48px height, focus #00C853 ring -->
+        <section class="section-wrapper" id="contact">
+            <div class="container">
+                <div class="demo-section-container">
+                    <div>
+                        <div class="section-badge">Get in Touch</div>
+                        <h3 class="gradient-color-2">Contact Softbros</h3>
+                        <p class="body-large">
+                            Interested in a customized demo of our Billing, Pigmy, or Cluvana Hospitality applications? Get in touch with our team today!
+                        </p>
+
+                        <div class="demo-contact-meta">
+                            <div class="contact-meta-row">
+                                <div class="contact-meta-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </div>
+                                <div>
+                                    <div class="caption">Email</div>
+                                    <div style="font-weight: 600;"><a href="mailto:communication.softbros@outlook.com">Click Here to mail</a></div>
+                                </div>
+                            </div>
+
+                            <div class="contact-meta-row">
+                                <div class="contact-meta-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="caption">Phone</div>
+                                    <div style="font-weight: 600;">+91 8431027977</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-meta-row">
+                                <div class="contact-meta-icon">
+                                    <img src="/images/logo.png" alt="Softbros Badge" style="width: 22px; height: 22px;">
+                                </div>
+                                <div>
+                                    <div class="caption">Origin</div>
+                                    <div class="gradient-color">Made in India</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form -->
+                    <div style="background-color: var(--app-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: var(--space-32);">
+                        <form id="demo-request-form">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name">Your Name *</label>
+                                <input type="text" id="contact-name" name="name" class="form-input" placeholder="..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-club">Business / Organization Name *</label>
+                                <input type="text" id="contact-club" name="club" class="form-input" placeholder="..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-email">Email Address *</label>
+                                <input type="email" id="contact-email" name="email" class="form-input" placeholder="..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-phone">Phone / WhatsApp Number *</label>
+                                <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-product">Product of Interest</label>
+                                <select id="contact-product" name="product" class="form-select">
+                                    <option value="Cluvana Hospitality" selected>Cluvana Hospitality Application (Clubs & Gymkhanas)</option>
+                                    <option value="Pigmy Application">Pigmy Application (Daily Finance & Collection)</option>
+                                    <option value="Billing Application">Billing Application (Commercial POS & Stock)</option>
+                                    <option value="Custom Software">Customized Business Software</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn-primary" style="width: 100%; height: 48px; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.1-.477-.15-.678.15-.2.301-.778.979-.954 1.18-.176.2-.351.226-.652.075-.301-.15-1.27-.468-2.42-1.493-.895-.798-1.5-1.785-1.676-2.086-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.3-.501.1-.2.05-.376-.025-.526-.075-.15-.678-1.636-.929-2.241-.244-.59-.492-.51-.677-.52l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.279.496 1.716.635.721.23 1.378.197 1.897.12.579-.087 1.78-.727 2.032-1.43.251-.702.251-1.303.176-1.43-.075-.126-.276-.201-.577-.352z"/>
+                                    <path d="M12.004 2C6.48 2 2 6.48 2 12c0 1.947.558 3.766 1.523 5.307L2.05 22l4.832-1.428A9.957 9.957 0 0 0 12.004 22C17.524 22 22 17.52 22 12s-4.476-10-9.996-10zm0 18.2c-1.635 0-3.155-.494-4.428-1.341l-.317-.212-2.871.849.866-2.776-.233-.339A8.17 8.17 0 0 1 3.82 12c0-4.512 3.672-8.18 8.184-8.18 4.513 0 8.184 3.668 8.184 8.18 0 4.513-3.671 8.2-8.184 8.2z"/>
+                                </svg>
+                                Submit Demo Request
+                            </button>
+                            <div style="font-size: 12px; color: var(--text-tertiary); text-align: center; margin-top: 10px;">
+                                Sends your pre-filled inquiry directly to Softbros (+91 8431027977) via WhatsApp
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer id="contact">
-        <script src="/script.js"></script>
-        <div class="wrapper">
-            <div class="container">
-                <div class="brand_logo">
-                    <img src="/images/logo.png" alt="Softbros Logo">
-                    <h4>Softbros</h4>
-                    <p class="country-made">Made in India</p>
-                </div>
-                <div class="contact">
-                    <h3>Contact</h3>
-                    <div class="contact-details">
-                        <p><span>Email:</span>support@softbros.in</p>
-                        <p><span>Phone:</span>+91 8431027977</p>
-                        <p><span>Person:</span>Harshith</p>
+
+    <!-- Site Footer with Softbros Logo and Links -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="nav-brand-group">
+                        <img src="/images/logo.png" alt="Softbros Logo" style="width: 32px; height: 32px; border-radius: 6px; background: #FFFFFF; padding: 2px;">
+                        <div class="nav-brand-title">Softbros<span>.</span></div>
+                    </div>
+                    <p>
+                        Elevating our local businesses to a premium level with simple, powerful, and advanced features. Taking local business to the digital world.
+                    </p>
+                    <div style="margin-top: 16px;">
+                        <span class="status-badge success">🇮🇳 Proudly Made in India</span>
                     </div>
                 </div>
+
+                <div>
+                    <div class="footer-col-title">Our Products</div>
+                    <ul class="footer-links">
+                        <li><a href="/cluvana/" class="footer-link">Cluvana Hospitality Platform</a></li>
+                        <li><a href="/finance/" class="footer-link">Pigmy Application</a></li>
+                        <li><a href="/billapp/" class="footer-link">Billing Application</a></li>
+                        <li><a href="/billapp/help/" class="footer-link">Help Center</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Company</div>
+                    <ul class="footer-links">
+                        <li><a href="#about" class="footer-link">About Softbros</a></li>
+                        <li><a href="#milestone" class="footer-link">Our Milestones</a></li>
+                        <li><a href="#motive" class="footer-link">Philosophy</a></li>
+                        <li><a href="/privacy-policy/" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Contact</div>
+                    <ul class="footer-links">
+                        <li><a href="mailto:communication.softbros@outlook.com" class="footer-link">click here to mail</a></li>
+                        <li><a href="tel:+918431027977" class="footer-link">+91 8431027977</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2025 Softbros. All rights reserved.</div>
+                <div>Pay only for what you use no extra charges for unnecessary options.</div>
             </div>
         </div>
     </footer>
-    <div class="center">
-        <p class="note">© 2025 Softbros. All rights reserved.
-        </p>
-    </div>
+
+    <script src="/script.js"></script>
 </body>
 
 </html>

@@ -4,25 +4,37 @@
     <url>
         <loc>https://softbros.in/</loc>
         <priority>1.0</priority>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
     </url>
 
     <url>
-        <loc>https://softbros.in/billapp/help</loc>
-        <lastmod>2025-04-19</lastmod>
-        <priority>0.5</priority>
+        <loc>https://softbros.in/cluvana/</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
     </url>
 
     <url>
-        <loc>https://softbros.in/billapp</loc>
-        <lastmod>2025-04-19</lastmod>
-        <priority>0.5</priority>
+        <loc>https://softbros.in/billapp/</loc>
+        <priority>0.9</priority>
+        <changefreq>weekly</changefreq>
     </url>
 
     <url>
-        <loc>https://softbros.in/finance</loc>
-        <lastmod>2025-04-19</lastmod>
-        <priority>0.5</priority>
+        <loc>https://softbros.in/finance/</loc>
+        <priority>0.8</priority>
+        <changefreq>weekly</changefreq>
+    </url>
+
+    <url>
+        <loc>https://softbros.in/billapp/help/</loc>
+        <priority>0.7</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+
+    <url>
+        <loc>https://softbros.in/privacy-policy/</loc>
+        <priority>0.3</priority>
+        <changefreq>yearly</changefreq>
     </url>
 
 </urlset>

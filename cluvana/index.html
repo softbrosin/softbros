@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="canonical" href="https://softbros.in/cluvana/">
+
+    <meta name="description"
+        content="Cluvana is the modern club operating system for private clubs & gymkhanas. Real-time dining POS, live KDS, member dues ledger, court booking, and payroll.">
+    <meta name="keywords"
+        content="Cluvana, club management software India, gymkhana billing software, sports club management system, KDS kitchen display, table side waiter app, member dues ledger, ESC POS thermal printing, club payroll India">
+    <meta name="author" content="Softbros">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph & Social Cards -->
+    <meta property="og:title" content="Cluvana | Club Management Software & Gymkhana POS Platform">
+    <meta property="og:description"
+        content="All-in-one digital operations platform for private clubs, gymkhanas, and sports associations by Softbros.">
+    <meta property="og:image" content="https://softbros.in/images/favicon.jpg">
+    <meta property="og:url" content="https://softbros.in/cluvana/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cluvana | Club Management Software & Gymkhana POS Platform">
+    <meta name="twitter:description" content="All-in-one digital operating system for private clubs, gymkhanas, and luxury sports venues by Softbros.">
+    <meta name="twitter:image" content="https://softbros.in/images/favicon.jpg">
+
+    <link rel="icon" href="/images/favicon.jpg" type="image/x-icon">
+    <title>Cluvana | Club Management Software & Gymkhana POS Platform</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Cluvana",
+      "operatingSystem": "All (Web-based, Android, iOS, Windows, macOS)",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Club Management Software",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR",
+        "description": "Tailored enterprise multi-tenant pricing based on member volume"
+      },
+      "description": "All-in-one digital operating system for private clubs and gymkhanas. Features real-time POS, live KDS, table buzzers, court and cottage reservations, member dues ledgers, and Indian statutory payroll.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Softbros",
+        "url": "https://softbros.in/"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Top Site Navigation (64px Height, Deep Dark Theme) -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-brand-group">
+                <a href="/" class="nav-brand-logo" aria-label="Softbros Home">
+                    <img src="/images/logo.png" alt="Softbros Logo" style="width: 28px; height: 28px; border-radius: 6px; background: #fff; padding: 2px;">
+                    <div class="nav-brand-title">Cluvana<span>.</span></div>
+                    <span class="nav-brand-tag">by Softbros</span>
+                </a>
+            </div>
+
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="/" class="nav-link">Company Home</a>
+                <a href="#features" class="nav-link">20 Core Modules</a>
+                <a href="#personas" class="nav-link">Staff Workflows</a>
+                <a href="#architecture" class="nav-link">Reliability</a>
+                <a href="/billapp/" class="nav-link">Billing App</a>
+                <a href="/finance/" class="nav-link">Pigmy Suite</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn-primary" id="header-cta-btn">Book Executive Demo</a>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+            <a href="/" class="nav-link">Company Home</a>
+            <a href="#features" class="nav-link">20 Core Modules</a>
+            <a href="#personas" class="nav-link">Staff Workflows</a>
+            <a href="#architecture" class="nav-link">Reliability</a>
+            <a href="/billapp/" class="nav-link">Billing App</a>
+            <a href="/finance/" class="nav-link">Pigmy Suite</a>
+            <a href="#contact" class="btn-primary">Book Executive Demo</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section (Minimum 60vh per spec, Animated abstract green geometric lines in background) -->
+        <section class="hero-section" id="hero">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+            <div class="container hero-content">
+                <div class="hero-pill">
+                    <span class="hero-pill-indicator"></span>
+                    <span>Softbros Enterprise Hospitality • Cluvana</span>
+                </div>
+
+                <h1 class="hero-title">
+                    The Modern Operating System for <span class="highlight">Private Clubs & Gymkhanas</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Unify your club operations with one synchronized platform that seamlessly connects members, waitstaff, chefs, billing, and management powered by real‑time technology, direct ESC/POS printing, and secure multi‑tenant schema isolation for effortless efficiency.
+                </p>
+
+                <!-- Primary and Secondary buttons inline per PDF spec -->
+                <div class="btn-group">
+                    <a href="#contact" class="btn-primary" id="hero-primary-cta">
+                        Schedule Executive Walkthrough
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#features" class="btn-secondary" id="hero-secondary-cta">
+                        Explore 20 Core Modules
+                    </a>
+                </div>
+
+                <!-- Live Metrics Strip -->
+                <div class="hero-stats-strip">
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-value">100%</div>
+                        <div class="hero-stat-label">All your club needs, fulfilled</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-value">&lt; 250ms</div>
+                        <div class="hero-stat-label">Real Time KDS Order Sync</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-value">Zero</div>
+                        <div class="hero-stat-label">Drivers Needed for ESC/POS</div>
+                    </div>
+                    <div class="hero-stat-item">
+                        <div class="hero-stat-value">1-Click</div>
+                        <div class="hero-stat-label">Indian Statutory Payroll (PF/ESI)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof Section (Grayscale logos fading in on scroll via IntersectionObserver) -->
+        <section class="social-proof-section" id="social-proof">
+            <div class="container">
+                <h3 class="social-proof-title">Trusted by Premier Sporting Associations, Gymkhanas & Country Clubs</h3>
+            </div>
+        </section>
+        <!-- Feature Grid Section (3-Column CSS Grid per PDF Spec) -->
+        <section class="section-wrapper" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Cluvana Architecture</div>
+                    <h2 class="section-title">20 Core Capabilities Built for Private Clubs</h2>
+                    <p class="section-subtitle">
+                        Every module is designed around the daily operations, committee rules, and member privilege hierarchy of prestigious clubs.
+                    </p>
+                </div>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                            </div>
+                            <h3 class="feature-title">Front Desk & Gate Verification</h3>
+                            <p class="feature-desc">Instant member lookup by phone number or ID to verify active membership standing, dues status, and clear guest entries.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Front Desk</span>
+                            <button class="feature-details-btn" data-feature="gate-verification">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <h3 class="feature-title">Profiles & Committee Roles</h3>
+                            <p class="feature-desc">Centralized member registry storing membership numbers, RFID smartcards, photos, and executive committee roles.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Governance</span>
+                            <button class="feature-details-btn" data-feature="member-hierarchy">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            </div>
+                            <h3 class="feature-title">Member Dues & Bill Ledger</h3>
+                            <p class="feature-desc">Automated tracking of unpaid dining, bar, lodging, and renewal dues under each member. Cashiers clear pending balances in 1 click.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Accounting</span>
+                            <button class="feature-details-btn" data-feature="dues-ledger">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            </div>
+                            <h3 class="feature-title">Restaurant & Bar POS</h3>
+                            <p class="feature-desc">Touchscreen billing designed for high-traffic dining rooms. Handles GST, liquor taxes, discounts, and split payments.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">POS & Dining</span>
+                            <button class="feature-details-btn" data-feature="pos-billing">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                            </div>
+                            <h3 class="feature-title">Mobile Waiter Ordering</h3>
+                            <p class="feature-desc">Waitstaff take table-side orders on phones and tablets. Orders route directly to the kitchen line and bar station.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Floor Service</span>
+                            <button class="feature-details-btn" data-feature="waiter-app">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><polygon points="6 2 18 2 18 6 6 6 6 2"/><rect x="3" y="6" width="18" height="12" rx="2"/><line x1="10" y1="22" x2="14" y2="22"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+                            </div>
+                            <h3 class="feature-title">Live Kitchen Display (KDS)</h3>
+                            <p class="feature-desc">Sub-second WebSocket order tickets with color-coded station routing (Veg, Non-Veg, Bar). Eliminates paper slips.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Kitchen Line</span>
+                            <button class="feature-details-btn" data-feature="live-kds">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                            </div>
+                            <h3 class="feature-title">Direct ESC/POS Printing</h3>
+                            <p class="feature-desc">Driver-free printing from web browser to 58mm and 80mm thermal receipt printers over WebUSB or Bluetooth.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Hardware</span>
+                            <button class="feature-details-btn" data-feature="esc-pos">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                            </div>
+                            <h3 class="feature-title">"Call for Service" Buzzer</h3>
+                            <p class="feature-desc">Digital waiter paging enabling seated diners to sound an instant audio and visual alert on staff tablets.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Experience</span>
+                            <button class="feature-details-btn" data-feature="table-buzzer">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            </div>
+                            <h3 class="feature-title">Guest Rooms & Cottages</h3>
+                            <p class="feature-desc">Track room occupancy, check-in dates, companion charges, tariffs, and housekeeping statuses (Clean, Occupied, Reserved).</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Lodging</span>
+                            <button class="feature-details-btn" data-feature="rooms-booking">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>
+                            </div>
+                            <h3 class="feature-title">Sports Amenities Booking</h3>
+                            <p class="feature-desc">Court scheduling for tennis, badminton, squash, swimming pool passes, and snooker with strict slot allocations.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Recreation</span>
+                            <button class="feature-details-btn" data-feature="sports-amenities">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            </div>
+                            <h3 class="feature-title">Party Halls & Banquets</h3>
+                            <p class="feature-desc">Advance reservations for banquet halls and lawns with advance deposit tracking and late cancellation penalties.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Banquets</span>
+                            <button class="feature-details-btn" data-feature="banquets-booking">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><path d="M8 2h8v4H8zM6 6h12l-2 16H8z"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+                            </div>
+                            <h3 class="feature-title">Liquor & Peg Stock Ledger</h3>
+                            <p class="feature-desc">Tracks spirits down to the milliliter and 30ml/60ml peg measures. Auto-deducts active volume when poured at the bar.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Bar Audit</span>
+                            <button class="feature-details-btn" data-feature="liquor-inventory">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            </div>
+                            <h3 class="feature-title">Bar Wastage & Breakage</h3>
+                            <p class="feature-desc">Loss registers for bottle drops, transit breakage, or cork taint with mandatory manager audit notes.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Audit Control</span>
+                            <button class="feature-details-btn" data-feature="bar-wastage">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            </div>
+                            <h3 class="feature-title">Staff Payroll (PF & ESI)</h3>
+                            <p class="feature-desc">Indian statutory salary automation factoring attendance, advance loans, PF, ESI, Professional Tax, and TDS.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">HR & Payroll</span>
+                            <button class="feature-details-btn" data-feature="payroll-management">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <h3 class="feature-title">Bank Advice & Batch PDF</h3>
+                            <p class="feature-desc">Single-click corporate bank transfer advice letters and batch downloadable PDF payslips for employees.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Finance</span>
+                            <button class="feature-details-btn" data-feature="bank-advice">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                            </div>
+                            <h3 class="feature-title">Daily Financial Reports</h3>
+                            <p class="feature-desc">End-of-day revenue reconciliation across dining, bar, lodging, sports, subscriptions, and expenses.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Analytics</span>
+                            <button class="feature-details-btn" data-feature="financial-reports">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                            </div>
+                            <h3 class="feature-title">Annual Dues & Renewals</h3>
+                            <p class="feature-desc">Automates annual membership fee cycles, identifies renewal deadlines, and sends batch renewal notices.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Subscriptions</span>
+                            <button class="feature-details-btn" data-feature="annual-subscriptions">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            </div>
+                            <h3 class="feature-title">Affiliated Clubs Directory</h3>
+                            <p class="feature-desc">Directory of partner golf and country clubs across cities with guidelines, contacts, and map coordinates.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Privileges</span>
+                            <button class="feature-details-btn" data-feature="affiliated-clubs">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+                            </div>
+                            <h3 class="feature-title">Events & Meeting Minutes</h3>
+                            <p class="feature-desc">Official archives for Minutes of Meeting (MOM) resolutions alongside push notifications for club galas.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Communications</span>
+                            <button class="feature-details-btn" data-feature="club-events">View Details →</button>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-svg-icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            </div>
+                            <h3 class="feature-title">2FA & Role Permissions</h3>
+                            <p class="feature-desc">SMS OTP and Authenticator app 2FA with strict role-based access permissions and managerial security controls.</p>
+                        </div>
+                        <div class="feature-card-footer">
+                            <span class="feature-category-tag">Security</span>
+                            <button class="feature-details-btn" data-feature="role-security">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Personas Section ("The Platform from Every Perspective") -->
+        <section class="section-wrapper" id="personas" style="background-color: var(--surface-2); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Tailored Role Workflows</div>
+                    <h2 class="section-title">Designed for Every Person on the Club Floor</h2>
+                    <p class="section-subtitle">
+                        From committee leaders and kitchen chefs to waiters and members, Cluvana eliminates manual friction across all operational touchpoints.
+                    </p>
+                </div>
+
+                <div class="persona-tabs-nav">
+                    <button class="persona-tab-button active" data-role="members">👤 Club Members</button>
+                    <button class="persona-tab-button" data-role="waiters">📱 Waitstaff</button>
+                    <button class="persona-tab-button" data-role="chefs">👨‍🍳 Kitchen Line & Chefs</button>
+                    <button class="persona-tab-button" data-role="cashiers">💳 Cashier & POS Desk</button>
+                    <button class="persona-tab-button" data-role="reception">🛎️ Reception & Front Desk</button>
+                    <button class="persona-tab-button" data-role="management">👔 Club Committee & Office</button>
+                </div>
+
+                <!-- Pane 1: Club Members -->
+                <div class="persona-pane active" id="persona-members">
+                    <h3 style="font-size: 26px; margin-bottom: 16px;">Effortless Privileges & Table Service</h3>
+                    <p class="body-large">Members experience effortless luxury with mobile ordering, instant waiter buzzers, and complete transparency into their dining bills and annual dues.</p>
+                    <ul class="persona-feature-list">
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Table-Side Ordering & Buzzer</strong>: Browse food & beverage menus and tap "Call for Service" to sound an audio chime for their waiter.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Live Bill Balance & Dues</strong>: View unpaid dining/bar orders, annual subscription status, and penalties directly on their profile.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Sports & Cottages Booking</strong>: Reserve guest rooms, tennis courts, and swimming pool slots with instant confirmation.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pane 2: Waiters -->
+                <div class="persona-pane" id="persona-waiters">
+                    <h3 style="font-size: 26px; margin-bottom: 16px;">Mobile Speed on the Floor</h3>
+                    <p class="body-large">Waiters take table-side orders on smartphones and tablets, eliminating lost paper slips and unnecessary trips to the kitchen line.</p>
+                    <ul class="persona-feature-list">
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Table-Side Punching</strong>: Punch orders by table number; food instantly routes to the kitchen screen, drinks route to the bar station.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Real-Time Table Buzzer Alerts</strong>: Audio and visual screen notifications trigger the moment a seated member requests service.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Ticket Modifications</strong>: Add extra rotis or cancel an item without walking back to a fixed POS terminal.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pane 3: Kitchen Chefs -->
+                <div class="persona-pane" id="persona-chefs">
+                    <h3 style="font-size: 26px; margin-bottom: 16px;">Zero Lost Slips & Organized KDS</h3>
+                    <p class="body-large">Kitchen chefs see a clear digital queue of active tickets organized by station (Veg, Non-Veg, Bar) with live elapsed timers.</p>
+                    <ul class="persona-feature-list">
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Live Kitchen Monitor</strong>: Orders pop up instantaneously via WebSockets with clear station tags and modification notes.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Ready-to-Serve Notifications</strong>: One tap marks food as "Ready", instantly chiming the assigned floor waiter for pickup.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Peak Rush Efficiency</strong>: Eliminates dropped, grease-stained, or misplaced handwritten paper KOTs.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pane 4: Cashiers -->
+                <div class="persona-pane" id="persona-cashiers">
+                    <h3 style="font-size: 26px; margin-bottom: 16px;">Fast POS & Instant Thermal Receipts</h3>
+                    <p class="body-large">Cashiers generate bills in seconds, calculate statutory food and liquor taxes automatically, and print directly to thermal receipt printers.</p>
+                    <ul class="persona-feature-list">
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>1-Click Bill Generation</strong>: Select table, room, or member number to generate final tax invoices with automated GST & VAT.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Multi-Mode Settlements</strong>: Accept UPI QR, Cash, Credit Card, Cheque, or mark the bill as pending balance on member ledger.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Direct ESC/POS Thermal Printing</strong>: Driver-free printing to 58mm/80mm USB and Bluetooth printers with cash drawer kick.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pane 5: Reception -->
+                <div class="persona-pane" id="persona-reception">
+                    <h3 style="font-size: 26px; margin-bottom: 16px;">Front Desk Member & Room Allocation</h3>
+                    <p class="body-large">Receptionists verify membership status instantly, allocate guest cottages, record companion tariffs, and assign sports court passes.</p>
+                    <ul class="persona-feature-list">
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Instant Verification</strong>: Search members by phone number or ID to see active standing and privileges.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Guest Rooms Management</strong>: View live room availability (Clean, Occupied, Reserved) and link room tariffs to the host member.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Facility Passes</strong>: Issue guest court passes for tennis, badminton, and swimming pool slots without manual registers.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pane 6: Management & Office -->
+                <div class="persona-pane" id="persona-management">
+                    <h3 style="font-size: 26px; margin-bottom: 16px;">Executive Control, Audits & Payroll</h3>
+                    <p class="body-large">General Managers, Secretaries, and Treasurers have complete control over staff payroll compliance, liquor audits, and financial statements.</p>
+                    <ul class="persona-feature-list">
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Indian Statutory Payroll</strong>: Computes monthly staff salaries with PF, ESI, Professional Tax, TDS, and salary advance repayments.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Liquor Shrinkage Audits</strong>: Track bar inventory down to the milliliter and peg; review breakage and wastage logs with audit trails.</div>
+                        </li>
+                        <li class="persona-feature-item">
+                            <span class="persona-check-icon">✓</span>
+                            <div><strong>Annual Subscriptions</strong>: Trigger batch membership renewal billing and monitor dues collection across the club calendar.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enterprise Reliability & Operational Pillars Section -->
+        <section class="section-wrapper" id="architecture">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">Enterprise Reliability</div>
+                    <h2 class="section-title">Built for Uninterrupted Club Operations</h2>
+                    <p class="section-subtitle">
+                        Engineered to run seamlessly across all smartphones, tablets, and computers with zero local server maintenance headaches.
+                    </p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <span class="tech-card-badge">Data Security & Privacy</span>
+                        <h4 class="tech-card-title">100% Isolated Club Environments</h4>
+                        <p class="tech-card-desc">Dedicated, encrypted cloud environments for each club, ensuring member profiles, financial ledgers, and committee records remain strictly confidential.</p>
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-card-badge">Instant Operations</span>
+                        <h4 class="tech-card-title">Sub-Second Live Synchronization</h4>
+                        <p class="tech-card-desc">Real-time communication synchronizing floor waitstaff, kitchen display screens, bar counters, and member table buzzers with zero delay during peak hours.</p>
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-card-badge">Hardware Flexibility</span>
+                        <h4 class="tech-card-title">Driver-Free Hardware Integration</h4>
+                        <p class="tech-card-desc">Plug-and-play compatibility with standard 58mm & 80mm thermal receipt printers, cash drawers, and barcode scanners without 3rd-party print spoolers.</p>
+                    </div>
+                    <div class="tech-card">
+                        <span class="tech-card-badge">Statutory Compliance</span>
+                        <h4 class="tech-card-title">Indian Statutory & Labor Standards</h4>
+                        <p class="tech-card-desc">Pre-configured compliance for GST tax invoicing, liquor excise registers, and Indian statutory payroll calculations (PF, ESI, Professional Tax, TDS).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Demo / Consultation Section -->
+        <section class="section-wrapper" id="contact" style="background-color: var(--surface-2); border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="demo-section-container">
+                    <div>
+                        <div class="section-badge">Executive Walkthrough</div>
+                        <h2>Schedule a Private Demo of Cluvana</h2>
+                        <p class="body-large">
+                            See how Cluvana can modernize your club’s dining rooms, bar audits, member billing, sports facilities, and payroll operations.
+                        </p>
+
+                        <div class="demo-contact-meta">
+                            <div class="contact-meta-row">
+                                <div class="contact-meta-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                </div>
+                                <div>
+                                    <div class="caption">Direct Email Support</div>
+                                    <div style="font-weight: 600;">communication.softbros@outlook.com</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-meta-row">
+                                <div class="contact-meta-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="caption">Call / WhatsApp Support</div>
+                                    <div style="font-weight: 600;">+91 8431027977</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consultation Form -->
+                    <div style="background-color: var(--app-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: var(--space-32);">
+                        <form id="demo-request-form">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name">Your Full Name *</label>
+                                <input type="text" id="contact-name" name="name" class="form-input" placeholder="..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-club">Club / Organization Name *</label>
+                                <input type="text" id="contact-club" name="club" class="form-input" placeholder="..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-email">Official Email Address *</label>
+                                <input type="email" id="contact-email" name="email" class="form-input" placeholder="..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-phone">Phone / WhatsApp Number *</label>
+                                <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-members">Estimated Member Count</label>
+                                <select id="contact-members" name="members" class="form-select">
+                                    <option value="500-1500">500 – 1,500 Members</option>
+                                    <option value="1500-5000" selected>1,500 – 5,000 Members</option>
+                                    <option value="5000+">5,000+ Members (Multi-Facility)</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn-primary" style="width: 100%; height: 48px; font-size: 16px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.979-.276-.1-.477-.15-.678.15-.2.301-.778.979-.954 1.18-.176.2-.351.226-.652.075-.301-.15-1.27-.468-2.42-1.493-.895-.798-1.5-1.785-1.676-2.086-.176-.301-.019-.464.132-.614.136-.135.301-.351.452-.527.15-.175.2-.301.3-.501.1-.2.05-.376-.025-.526-.075-.15-.678-1.636-.929-2.241-.244-.59-.492-.51-.677-.52l-.577-.01c-.2 0-.526.075-.802.376-.276.301-1.053 1.028-1.053 2.508 0 1.48 1.078 2.909 1.229 3.11.15.2 2.122 3.24 5.141 4.544.718.31 1.279.496 1.716.635.721.23 1.378.197 1.897.12.579-.087 1.78-.727 2.032-1.43.251-.702.251-1.303.176-1.43-.075-.126-.276-.201-.577-.352z"/>
+                                    <path d="M12.004 2C6.48 2 2 6.48 2 12c0 1.947.558 3.766 1.523 5.307L2.05 22l4.832-1.428A9.957 9.957 0 0 0 12.004 22C17.524 22 22 17.52 22 12s-4.476-10-9.996-10zm0 18.2c-1.635 0-3.155-.494-4.428-1.341l-.317-.212-2.871.849.866-2.776-.233-.339A8.17 8.17 0 0 1 3.82 12c0-4.512 3.672-8.18 8.184-8.18 4.513 0 8.184 3.668 8.184 8.18 0 4.513-3.671 8.2-8.184 8.2z"/>
+                                </svg>
+                                Request Customized Walkthrough
+                            </button>
+                            <div style="font-size: 12px; color: var(--text-tertiary); text-align: center; margin-top: 10px;">
+                                Sends your request directly to Softbros (+91 8431027977) on WhatsApp
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Feature Detail Modal -->
+    <div class="modal-backdrop" id="feature-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">×</button>
+            <div class="modal-header">
+                <div class="modal-badge" id="modal-badge">Feature Specification</div>
+                <h2 class="modal-title" id="modal-title">Feature Title</h2>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="modal-section-title">Module Summary</div>
+                    <p id="modal-summary" style="font-size: 15px; line-height: 1.6; margin-top: 6px;"></p>
+                </div>
+                <div>
+                    <div class="modal-section-title">Key Operational Benefits</div>
+                    <p id="modal-benefits" style="font-size: 15px; color: #B0B0B0; line-height: 1.6; margin-top: 6px;"></p>
+                </div>
+                <div>
+                    <div class="modal-section-title">Real-World Operational Scenario</div>
+                    <div class="modal-example-box" id="modal-example"></div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: flex-end;">
+                <a href="#contact" class="btn-primary" onclick="document.getElementById('feature-modal').classList.remove('open');">
+                    Book Walkthrough for This Feature
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="nav-brand-group">
+                        <img src="/images/logo.png" alt="Softbros Logo" style="width: 28px; height: 28px; border-radius: 6px; background: #fff; padding: 2px;">
+                        <div class="nav-brand-title">Cluvana<span>.</span></div>
+                    </div>
+                    <p>
+                        The all-in-one digital operating system engineered for private clubs, gymkhanas, and sports associations. Proudly crafted by Softbros.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Cluvana Modules</div>
+                    <ul class="footer-links">
+                        <li><a href="#features" class="footer-link">Core 20 Modules</a></li>
+                        <li><a href="#personas" class="footer-link">Staff Workflows</a></li>
+                        <li><a href="#architecture" class="footer-link">Architecture</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Softbros Suite</div>
+                    <ul class="footer-links">
+                        <li><a href="/" class="footer-link">Company Home</a></li>
+                        <li><a href="/billapp/" class="footer-link">Billing Application</a></li>
+                        <li><a href="/finance/" class="footer-link">Pigmy Suite</a></li>
+                        <li><a href="/privacy-policy/" class="footer-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-col-title">Contact & Support</div>
+                    <ul class="footer-links">
+                        <li><a href="mailto:communication.softbros@outlook.com" class="footer-link">Click here to mail</a></li>
+                        <li><a href="tel:+918431027977" class="footer-link">+91 8431027977</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2025 Softbros. All rights reserved. Cluvana™ is a trademark of Softbros.</div>
+                <div><a href="/" style="color: var(--primary-accent);">← Return to Softbros Company Overview</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
