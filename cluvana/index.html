@@ -466,12 +466,50 @@
                 </div>
 
                 <div class="persona-tabs-nav">
-                    <button class="persona-tab-button active" data-role="members">👤 Club Members</button>
-                    <button class="persona-tab-button" data-role="waiters">📱 Waitstaff</button>
-                    <button class="persona-tab-button" data-role="chefs">👨‍🍳 Kitchen Line & Chefs</button>
-                    <button class="persona-tab-button" data-role="cashiers">💳 Cashier & POS Desk</button>
-                    <button class="persona-tab-button" data-role="reception">🛎️ Reception & Front Desk</button>
-                    <button class="persona-tab-button" data-role="management">👔 Club Committee & Office</button>
+                    <button class="persona-tab-button active" data-role="members">
+                        <svg class="persona-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <span>Club Members</span>
+                    </button>
+                    <button class="persona-tab-button" data-role="waiters">
+                        <svg class="persona-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                        <span>Waitstaff</span>
+                    </button>
+                    <button class="persona-tab-button" data-role="chefs">
+                        <svg class="persona-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/>
+                            <line x1="6" y1="17" x2="18" y2="17"/>
+                        </svg>
+                        <span>Kitchen Line & Chefs</span>
+                    </button>
+                    <button class="persona-tab-button" data-role="cashiers">
+                        <svg class="persona-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="5" width="20" height="14" rx="2"/>
+                            <line x1="2" y1="10" x2="22" y2="10"/>
+                        </svg>
+                        <span>Cashier & POS Desk</span>
+                    </button>
+                    <button class="persona-tab-button" data-role="reception">
+                        <svg class="persona-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 16a6 6 0 0 0-12 0"/>
+                            <path d="M12 4v4"/>
+                            <path d="M10 4h4"/>
+                            <line x1="2" y1="20" x2="22" y2="20"/>
+                        </svg>
+                        <span>Reception & Front Desk</span>
+                    </button>
+                    <button class="persona-tab-button" data-role="management">
+                        <svg class="persona-tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                        </svg>
+                        <span>Club Committee & Office</span>
+                    </button>
                 </div>
 
                 <!-- Pane 1: Club Members -->
@@ -738,7 +776,7 @@
                 </div>
             </div>
             <div style="display: flex; justify-content: flex-end;">
-                <a href="#contact" class="btn-primary" onclick="document.getElementById('feature-modal').classList.remove('open');">
+                <a href="#contact" class="btn-primary" id="modal-walkthrough-btn">
                     Book Walkthrough for This Feature
                 </a>
             </div>

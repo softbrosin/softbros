@@ -982,19 +982,41 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: all 0.15s ease;
+    transition: all 0.2s ease;
     box-shadow: var(--card-shadow);
+}
+
+.persona-tab-icon {
+    width: 17px;
+    height: 17px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, stroke 0.2s ease;
 }
 
 .persona-tab-button:hover {
     background-color: var(--surface-2);
     color: var(--text-primary);
+    border-color: rgba(134, 59, 238, 0.3);
+}
+
+.persona-tab-button:hover .persona-tab-icon {
+    transform: translateY(-1px);
 }
 
 .persona-tab-button.active {
-    background-color: rgba(0, 168, 68, 0.1);
+    background-color: rgba(134, 59, 238, 0.08);
     border-color: var(--primary-accent);
     color: var(--primary-accent);
+    box-shadow: 0 2px 8px rgba(134, 59, 238, 0.15);
+}
+
+.persona-tab-button.active .persona-tab-icon {
+    stroke: var(--primary-accent);
 }
 
 .persona-pane {
@@ -1009,7 +1031,7 @@ a {
     background-color: var(--surface-1);
     border: 1px solid var(--border-color);
     border-radius: var(--card-radius);
-    padding: var(--space-40);
+    padding: 20px;
     box-shadow: var(--card-shadow);
 }
 

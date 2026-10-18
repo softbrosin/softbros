@@ -415,6 +415,7 @@ const featureLibrary = {
 function initFeatureModalSystem() {
     const modalBackdrop = document.getElementById('feature-modal');
     const modalCloseBtn = document.getElementById('modal-close-btn');
+    const modalWalkthroughBtn = document.getElementById('modal-walkthrough-btn');
     const modalBadge = document.getElementById('modal-badge');
     const modalTitle = document.getElementById('modal-title');
     const modalSummary = document.getElementById('modal-summary');
@@ -455,6 +456,26 @@ function initFeatureModalSystem() {
         modalCloseBtn.addEventListener('click', closeModal);
     }
 
+    // Handle Walkthrough Button inside modal
+    const walkthroughBtn = modalWalkthroughBtn || modalBackdrop.querySelector('a[href="#contact"]');
+    if (walkthroughBtn) {
+        walkthroughBtn.addEventListener('click', (e) => {
+            closeModal();
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                e.preventDefault();
+                requestAnimationFrame(() => {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                    history.pushState(null, '', '#contact');
+                    const nameInput = document.getElementById('contact-name');
+                    if (nameInput) {
+                        setTimeout(() => nameInput.focus(), 500);
+                    }
+                });
+            }
+        });
+    }
+
     modalBackdrop.addEventListener('click', (e) => {
         if (e.target === modalBackdrop) closeModal();
     });
@@ -466,6 +487,7 @@ function initFeatureModalSystem() {
     });
 
     window.openFeatureDetail = openModal;
+    window.closeFeatureModal = closeModal;
 }
 
 /* ==========================================================================
