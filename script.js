@@ -194,7 +194,7 @@ function initDashboardSimulator() {
             renderTable(activeFilter);
 
             // Flash notification
-            showSystemBanner(`Ticket ${id} marked Ready to Serve! Floor waitstaff notified via WebSocket.`);
+            showSystemBanner(`Ticket ${id} marked Ready to Serve! Floor waitstaff notified.`);
         } else {
             alert(`[Cluvana Ledger]: Member Dues record verified for ${id}. Direct 1-click settlement available.`);
         }
@@ -308,7 +308,7 @@ const featureLibrary = {
     'live-kds': {
         title: 'Live Kitchen Display System (KDS)',
         category: 'Kitchen Management',
-        summary: 'Real-time kitchen monitor powered by WebSockets that updates dynamically when new orders arrive, with filters for Veg, Non-Veg, or All stations.',
+        summary: 'Real-time kitchen monitor powered by realtime technology that updates dynamically when new orders arrive, with filters for Veg, Non-Veg, or All stations.',
         benefits: 'Keeps the kitchen organized during peak rush hours; allows chefs to notify waiters when dishes are ready.',
         example: 'The kitchen screen chimes and displays a new ticket; once cooked, the chef taps "Ready", notifying the floor server to collect it.'
     },
