@@ -1,0 +1,107 @@
+.whatsapp_channel input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.whatsapp_channel label {
+	cursor: pointer;
+	width: 70px;
+	height: 32px;
+	background: rgb(255, 255, 255);
+	display: block;
+	border-radius: 100px;
+  bottom: 28px;
+  left: 18px;
+	position: relative;
+  margin: 0;
+}
+
+.whatsapp_channel label:after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 32px;
+	height: 32px;
+	border-radius: 90px;
+	transition: 0.3s;
+  background-image: url('../background/whatsapp-logo.png');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50% 50%;
+}
+
+.whatsapp_channel label::after {
+  content: 'Off';
+  text-indent: 40px;
+}
+/* .whatsapp_channel input:checked + label {
+	background: #bada55;
+} */
+
+.whatsapp_channel input:checked + label:after {
+	left: calc(100% - 0px);
+	transform: translateX(-100%);
+  /* background-color: rgb(106, 252, 70); */
+}
+
+.whatsapp_channel input:checked + label::after {
+  content: 'On';
+  text-indent: -60px;
+  color: rgb(55, 241, 55);
+}
+
+
+/* Stitch modern toggle */
+.stitch_switch_container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stitch_switch_container input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.stitch_switch_container label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 26px;
+    background: #e0e0e0;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    margin: 0;
+    transition: background 0.3s;
+}
+
+.stitch_switch_container label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.stitch_switch_container input:checked + label {
+    background: #2874f0;
+}
+
+.stitch_switch_container input:checked + label:after {
+    left: calc(100% - 4px);
+    transform: translateX(-100%);
+}
+
+.stitch_switch_container label:active:after {
+    width: 28px;
+}

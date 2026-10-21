@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:8000/supplier/1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./hame - Supplier Profile &amp; Invoices_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./hame - Supplier Profile &amp; Invoices_files/stocks.css">
+    <link rel="stylesheet" href="./hame - Supplier Profile &amp; Invoices_files/supplier_detail.css">
+    <title>hame - Supplier Profile &amp; Invoices</title>
+<link rel="stylesheet" href="./hame - Supplier Profile &amp; Invoices_files/setup.css"><link rel="stylesheet" href="./hame - Supplier Profile &amp; Invoices_files/switch_btn.css"><script src="./hame - Supplier Profile &amp; Invoices_files/jquery.js.download"></script><style>
+    .brandlogo {
+        position: absolute;
+        left: 45%;
+    }
+
+    .wrapp {
+        place-content: space-between;
+        display: flex;
+        padding: 0 20px;
+        margin: auto;
+    }
+
+    .logo {
+        display: none !important;
+    }
+
+    #inst {
+        border-radius: 21px;
+        font-size: 18px;
+        color: green;
+    }
+
+    .time {
+        display: flex;
+        background-color: rgb(241, 255, 241);
+        height: fit-content;
+        color: green;
+    }
+
+    .time p {
+        margin: 0;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+        height: 60px;
+        z-index: 999;
+    }
+
+    .header button {
+        padding: 7px;
+        justify-items: center;
+        padding: 6px 16px;
+        color: blue;
+        background-color: rgba(0, 0, 255, 0.088);
+        transition: all .2s ease-in;
+    }
+
+    .header button:hover {
+        background: #4565ff;
+        color: #fff;
+    }
+
+    .options {
+        line-height: 60px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+
+    .err {
+        padding: 0 20px 0 10px;
+        margin: 0;
+        background: #ffff64;
+        height: fit-content;
+        position: absolute;
+        top: 80px;
+        font-weight: 600;
+        width: fit-content;
+        max-width: 40%;
+        right: 0;
+    }
+
+    .softbros_brand_name {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.788);
+        padding: 0 0 2px 8px;
+        border-radius: 40px;
+        margin-top: 10px;
+        display: flex;
+        gap: 6px;
+        z-index: 9;
+    }
+
+    .softbros_brand_name a {
+        text-decoration: none;
+    }
+
+    .softbros_brand_name img {
+        position: unset;
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 50%;
+        vertical-align: middle;
+        align-self: center;
+        box-shadow: 0 0 11px rgb(199, 199, 199);
+    }
+
+    .softbros_brand_name h1 {
+        font-size: 18px;
+        color: white;
+        margin: 0;
+    }
+
+    .loader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        z-index: 20;
+    }
+
+    .loader.disable {
+        display: none !important;
+    }
+
+    .loader .wrapper {
+        padding: 20px;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0 0 12px rgb(184, 184, 184);
+    }
+
+    .loader .wrapper .spin {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 4px solid #ddd;
+        border-top-color: rgb(21, 139, 189);
+        animation: loading 1s linear infinite;
+    }
+
+    a#ptc button {
+        color: purple;
+        background-color: rgb(255, 241, 255);
+    }
+
+    @keyframes loading {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style><link rel="icon" type="image/x-icon" href="http://127.0.0.1:8000/static/favicon.png"></head>
+
+
+
+
+
+
+
+<body><main>
+    <script src="./hame - Supplier Profile &amp; Invoices_files/jquery.js.download"></script>
+    <div class="header">
+        <div class="brandlogo">
+            <div class="softbros_brand_name">
+                <a href="https://softbros.in/" target="_blank">
+                    <h1>Softbros</h1>
+                </a>
+                <img src="./hame - Supplier Profile &amp; Invoices_files/brand.jpg" alt="Softbros logo" class="softbros_logo_login">
+            </div>
+        </div>
+        <div class="wrapp">
+            <div class="time">
+                <p style=" padding:10px;font-size:18px; ">Wednesday,</p><p id="inst" style="padding: 10px;font-weight: 400;">12:40:53 pm</p>
+                
+            </div>
+            <div class="options">
+                 
+                <a href="http://127.0.0.1:8000/billing" id="billing">
+                    <button>Billing</button>
+                </a>
+
+                <a href="http://127.0.0.1:8000/analytics" id="analytic">
+                    <button>Daily Business</button>
+                </a>
+                <a href="http://127.0.0.1:8000/adminlogin" id="adminlogin" "="">
+                    <button>Owner panel</button>
+                </a>
+                <a href="http://127.0.0.1:8000/logout">
+                    <button style=" background-color: #fdebeb; color: red; " id=" logout ">Logout</button>
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="loader disable">
+        <div class=" wrapper ">
+            <div class=" spin "></div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('pageshow', function () {
+            var l = document.querySelector('.loader');
+            if (l) l.classList.add('disable');
+        });
+        $(" body ").fadeIn();
+        let headerTimeDisplay = document.getElementById('inst');
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var dayName = days[new Date().getDay()];
+        headerTimeDisplay.insertAdjacentHTML('beforebegin', `<p style=" padding:10px;font-size:18px; ">${dayName},</p>`)
+        setInterval(function () { headerTimeDisplay.textContent = new Date().toLocaleTimeString() }, 1000)
+
+        var locationis = location.pathname;
+        var pages = ['/api', '/stocks', '/add-stock', '/analytics', '/userest']
+
+        if (locationis) {
+            document.querySelectorAll('.header a').forEach((a) => {
+                if (a.pathname == locationis) {
+                    a.style.display = 'none'
+                }
+                if (a.pathname.includes(pages)) {
+                    document.querySelectorAll('.header a').forEach((a) => {
+                        if (a.pathname.includes(pages)) {
+                            a.style.display = 'block'
+                        } else {
+                            a.style.display = 'none'
+                        }
+                    })
+                }
+
+            });
+
+        }
+    </script>
+</main>
+
+
+<script src="./hame - Supplier Profile &amp; Invoices_files/JsBarcode.all.min.js.download"></script>
+<style>
+    .countInput {
+        margin: 40px 0;
+    }
+
+    .Barcodeparent {
+        position: fixed;
+        display: flex;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(216, 216, 216, 0.66);
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+    }
+
+    #barcodeOriginal {
+        width: 100%;
+        background: #fff;
+        text-align: center;
+        font-weight: 700;
+        height: 91px;
+        margin: 0;
+        max-width: 166px;
+        border: 2px solid gray;
+        box-sizing: border-box;
+    }
+
+    #barcodeOriginal p {
+        margin: 0;
+    }
+
+    .barcodeListConatiner {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 2px 6px;
+        position: relative;
+        width: fit-content;
+        padding: 4px;
+        max-width: 794px;
+        max-height: 600px;
+        margin: auto;
+        box-sizing: border-box;
+        top: 10px;
+        overflow-y: scroll;
+        background-color: #fff;
+    }
+
+    .barcodeListConatiner svg {
+        width: 112px;
+        height: fit-content;
+    }
+
+    .Bsq,
+    .Bmrp {
+        display: inline-block;
+    }
+
+    .Bmrp {
+        font-size: 12px;
+    }
+
+    .Bdisc {
+        font-size: 9px;
+        display: flex;
+        gap: 4px;
+        align-items: baseline;
+        padding: 0 4px;
+    }
+
+    .Bdisc strong {
+        font-size: 14px;
+    }
+
+    .Bsq {
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    .Barcodeparent .controls {
+        position: relative;
+        top: 90px;
+        background-color: #fff;
+        height: max-content;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    @media print {
+        html {
+            visibility: hidden;
+        }
+
+        body {
+            background-color: transparent !important;
+            background-image: none !important;
+            color: #000000 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            height: 100%;
+        }
+
+        main {
+            display: none !important;
+        }
+
+        .barcodeListConatiner {
+            position: absolute !important;
+            top: 20px !important;
+            left: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: 1920px !important;
+            visibility: visible;
+            gap: 4px 6px !important;
+            justify-content: center !important;
+            box-sizing: unset !important;
+            margin-top: 1px;
+            overflow-y: unset !important;
+        }
+
+        .barcodeListConatiner svg {
+            width: 100% !important;
+            height: 54px !important;
+        }
+
+        #barcodeOriginal {
+            width: 280px;
+            background: #fff;
+            text-align: center;
+            font-weight: 700;
+            height: 126px !important;
+            margin: auto !important;
+            max-width: 100% !important;
+            border: unset !important;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .Barcodeparent .controls {
+            display: block !important;
+        }
+
+        .Bdisc {
+            font-size: 14px !important;
+            display: flex !important;
+            gap: 4px !important;
+            align-items: baseline !important;
+            padding: 0 4px !important;
+            margin: auto !important;
+            width: max-content !important;
+        }
+
+        .Bmrp,
+        .Bdisc strong {
+            font-size: 18px !important;
+        }
+    }
+</style>
+
+<div class="Barcodeparent" style="display: none;">
+    <div class="controls">
+        <h1>Min 4 &amp; Max 48 barcode at once</h1>
+        <div class="countInput">
+            <label for="barcodeCount">Please enter number barcode need to generate</label>
+            <input type="number" placeholder="Barcode count" value="4" style="max-width: 40px;" id="barcode_count" oninput="generateBarcode(this)">
+        </div>
+        <div style="display: flex; gap: 30px;">
+            <button onclick="print()">Print</button>
+            <button style="    background: #fff;
+            border: 1px solid #4565ff;
+            color: #4565ff;" onclick="document.querySelector('.Barcodeparent').style.display='none'">Close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // let mrp,sq,dis,bar;
+    ele = document.querySelector('.Barcodeparent');
+
+    // function produceBarcode(mrp, sq, dis, bar, elen, count) {
+    function produceBarcode(count) {
+        console.log(`count`, count);
+        const parentPanel = document.querySelector('.barcodeListConatiner');
+        const getBar = document.getElementById('barcodeOriginal');
+        console.log(`getBar`, getBar);
+        if (getBar) {
+            const clonedBarcode = getBar.cloneNode(true);
+            parentPanel.innerHTML = '';
+            for (let i = 0; i < count; i++) {
+                const clonedBarcode = getBar.cloneNode(true);
+                parentPanel.appendChild(clonedBarcode)
+            }
+        }
+    }
+    function produceBarcodeInit(mrp, sq, dis, bar, elen, count) {
+        // MRP 450
+        // size / quality
+        //DISCOUNT
+        //Barcode
+        if (!elen) {
+            elen = ele
+        }
+
+        elen.style.display = 'flex';
+        const blc = document.querySelector('.barcodeListConatiner')
+        if (blc) blc.remove();
+        const Bstruc = `
+      <div id="barcodeOriginal">
+    <p class="Bmrp">MRP: <span>${mrp}</span>/-</p>
+    <p class="Bsq"><span>${sq}</span></p>
+    <p class="Bdisc"><span>Disc: ${dis}%</span><strong>${mrp - (mrp * dis / 100)}/-</strong></p>
+    <svg id="barcode"></svg>
+  </div>`
+
+        const crWrap = document.createElement('div');
+        crWrap.className = "barcodeListConatiner";
+        elen.prepend(crWrap)
+        crWrap.innerHTML = Bstruc
+
+        JsBarcode('#barcode', bar, {
+            height: 30
+        });
+        const getBar = document.getElementById('barcodeOriginal');
+        // getBar.style.display = "none";
+
+
+        for (i = 0; i < (count - 1); i++) {
+            crWrap.append(getBar.cloneNode(true))
+        }
+    }
+    // produceBarcode(450, 'premium', 10, 'Softb450', ele, 48)
+    function generateBarcode(ins) {
+        const bo = document.querySelectorAll('#barcodeOriginal')[0]
+        if (ins.value > 48) {
+            popup('Please enter barcode count below 48');
+            produceBarcode(48)
+            //produceBarcodeInit(bo.children[0].children[0].textContent, bo.children[1].children[0].textContent, bo.children[2].children[0].textContent, bo.querySelector('text').textContent, ele, 48)
+        } else if (ins.value < 4) {
+            popup('Please enter barcode count above 4');
+            produceBarcode(4)
+            //produceBarcodeInit(bo.children[0].children[0].textContent, bo.children[1].children[0].textContent, bo.children[2].children[0].textContent, bo.querySelector('text').textContent, ele, 4)
+        } else {
+            produceBarcode(parseInt(ins.value))
+            //produceBarcodeInitproduceBarcode(bo.children[0].children[0].textContent, bo.children[1].children[0].textContent, bo.children[2].children[0].textContent, bo.querySelector('text').textContent, ele, ins.value)
+        }
+    }
+</script>
+
+
+    <!-- Confirmation Popup -->
+    <div class="popup" id="popup" style="display: none; z-index: 1100;">
+        <div class="content">
+            <p id="popup_message" style="font-size: 16px; font-weight: 600; color: #0f172a; margin-bottom: 16px; text-align: center;">Message Here</p>
+            <div class="button_clust" style="display: flex; gap: 12px; justify-content: center;">
+                <button id="okbtns" onclick="okayClose()" style="padding: 8px 18px; border-radius: 6px; font-weight: 600; cursor: pointer;">OK</button>
+                <button id="yesbtns" style="padding: 8px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; display: none; background: #dc2626; color: #fff; border: none;">Yes</button>
+            </div>
+            <script>
+                function okayClose() {
+                    document.getElementById("popup").style.display = "none";
+                    document.querySelector('.popup #yesbtns').style.display = "none";
+                    document.querySelector('.popup #okbtns').textContent = 'Ok';
+                }
+                function popup(msgs, func = null, atr = null) {
+                    if (func) {
+                        const ee = document.querySelector('.popup #yesbtns');
+                        const el = document.querySelector('.popup #okbtns');
+                        el.textContent = 'No';
+                        ee.style.display = 'block';
+                        ee.onclick = () => {
+                            func(atr);
+                            document.getElementById("popup").style.display = "none";
+                        }
+                    }
+                    document.getElementById("popup").style.display = 'block';
+                    document.getElementById("popup_message").textContent = msgs;
+                }
+            </script>
+        </div>
+    </div>
+
+    <!-- Edit Supplier Modal -->
+    <div id="editSupplierModal" class="modal_overlay" style="display: none;">
+        <div class="modal_card">
+            <div class="modal_header">
+                <h3>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg>
+                    Edit Supplier Details
+                </h3>
+                <button type="button" class="modal_close" onclick="closeEditModal()" title="Close">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <div class="modal_body">
+                <div class="form_group">
+                    <label>Supplier Name *</label>
+                    <div class="input_icon_wrap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path></svg>
+                        <input type="text" id="edit_sup_name" value="hame" placeholder="e.g. Apex Garments">
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label>Phone Number</label>
+                    <div class="input_icon_wrap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <input type="text" id="edit_sup_phone" value="" placeholder="e.g. 9876543210">
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label>GSTIN</label>
+                    <div class="input_icon_wrap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                        <input type="text" id="edit_sup_gst" value="" placeholder="e.g. 29ABCDE1234F1Z5" style="text-transform: uppercase;">
+                    </div>
+                </div>
+                <div class="form_group">
+                    <label>Address</label>
+                    <div class="input_icon_wrap">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="top: 14px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <textarea id="edit_sup_address" rows="3" placeholder="Supplier shop/office address"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal_footer">
+                <button type="button" class="btn_cancel" onclick="closeEditModal()">Cancel</button>
+                <button type="button" class="btn_save_modal" onclick="saveSupplierDetails()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Invoice Date Modal -->
+    <div id="editInvoiceDateModal" class="modal_overlay" style="display: none;">
+        <div class="modal_content" style="max-width: 400px; padding: 20px;background-color: #fff;">
+            <div class="modal_header">
+                <h3>Edit Invoice Date</h3>
+                <button type="button" class="modal_close" onclick="closeEditDateModal()" title="Close">×</button>
+            </div>
+            <form id="editInvoiceDateForm" class="modal_form" onsubmit="event.preventDefault(); submitEditDateForm();">
+                <input type="hidden" id="edit_date_purchase_id" value="">
+                <div class="form_group">
+                    <label>Invoice Number</label>
+                    <div id="edit_date_invoice_num_display" style="font-weight: 700; color: var(--sd-slate-800); font-family: var(--sd-font-mono); font-size: 15px; padding: 4px 0;">INV-1001</div>
+                </div>
+                <div class="form_group">
+                    <label for="edit_date_input">Purchase / Inward Date *</label>
+                    <input type="date" id="edit_date_input" required="" style="width: 100%; height: 40px; padding: 6px 12px; border: 1px solid var(--sd-slate-300); border-radius: var(--sd-radius-md); font-size: 14px; font-weight: 600; font-family: inherit; box-sizing: border-box;">
+                </div>
+                <div class="modal_actions" style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px;">
+                    <button type="button" class="btn_cancel" onclick="closeEditDateModal()">Cancel</button>
+                    <button type="submit" class="btn_save_modal" id="edit_date_submit_btn">Update Date</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Change Supplier Modal (Move Invoice or Single Item) -->
+    <div id="changeSupplierModal" class="modal_overlay" style="display: none;">
+        <div class="modal_card" style="max-width: 480px;">
+            <div class="modal_header">
+                <h3 id="change_sup_modal_title">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"></path><path d="m8 21-4-4 4-4"></path><path d="M4 17h16"></path></svg>
+                        Move Invoice (All Items in One Go)</h3>
+                <button type="button" class="modal_close" onclick="closeChangeSupplierModal()" title="Close">×</button>
+            </div>
+            <div class="modal_body" style="padding: 22px 26px; display: flex; flex-direction: column; gap: 16px;">
+                <div style="background: #eef2ff; border-radius: 10px; padding: 14px 18px; border: 1.5px solid #c7d2fe;">
+                    <span id="change_sup_modal_badge" style="font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px; color: #4338ca; display: block; margin-bottom: 4px;">MOVING ENTIRE INVOICE</span>
+                    <strong id="change_sup_target_desc" style="font-size: 15px; color: #1e1b4b; display: block; margin-bottom: 4px; word-break: break-all;">Invoice 2006 (All 1 item)</strong>
+                    <span id="change_sup_sub_note" style="font-size: 12.5px; color: #4338ca; display: block; font-weight: 600;">All items in this invoice will be transferred to the target supplier in one go.</span>
+                </div>
+
+                <div class="form_group" style="display: flex; flex-direction: column; gap: 6px;">
+                    <label style="font-size: 13px; font-weight: 700; color: #334155;">Select Target Supplier *</label>
+                    <select id="target_supplier_select" onchange="onTargetSupplierChange()" style="width: 100%; height: 42px; padding: 8px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; background-color: #fff; box-sizing: border-box; cursor: pointer;">
+                        <option value="">-- Choose Target Supplier --</option>
+                        
+                        <option value="25">BALAJI SAREE MANDIR  DHARMVARAM</option>
+                        
+                        <option value="2">BASI</option>
+                        
+                        <option value="15">D SHANKAR SILK</option>
+                        
+                        <option value="10">HANUMAN SILK CREATION</option>
+                        
+                        <option value="22">I S TEXTILE SAREE</option>
+                        
+                        <option value="13">J J SILK</option>
+                        
+                        <option value="5">KANCH WEAVERS VICKY</option>
+                        
+                        <option value="16">KP SILK PURSHI</option>
+                        
+                        <option value="18">NUTHAN TEXLILES SILK</option>
+                        
+                        <option value="11">PEE TEX</option>
+                        
+                        <option value="19">PRAG FASHION</option>
+                        
+                        <option value="28">PRAKRUTHI COLLECTIONS</option>
+                        
+                        <option value="7">PS SILK KANCHIPURAM</option>
+                        
+                        <option value="14">SRS SILK TRADERS</option>
+                        
+                        <option value="20">VARALAKSHMI SILKS KANCHI</option>
+                        
+                        <option value="17">VISHWA KARTHIKEYAN</option>
+                        
+                        <option value="6">Vadha Raj k c sILK</option>
+                        
+                        <option value="26">grandhi silk kendra</option>
+                        
+                        <option value="23">kP</option>
+                        
+                        <option value="24">kP kanchivaram</option>
+                        
+                        <option value="4">kanchi weaversavicky</option>
+                        
+                        <option value="3">kanchi weaves vicky</option>
+                        
+                        <option value="27">kotam fabrics dhramvaram</option>
+                        
+                        <option value="9">pawan interna international</option>
+                        
+                        <option value="21">sri mahaveer textilfe</option>
+                        
+                        <option value="12">sri sarvalakshmi silk</option>
+                        
+                        <option value="8">surat</option>
+                        
+                        <option value="__new__" style="color: #4f46e5; font-weight: 700;">+ Create New Supplier...</option>
+                    </select>
+                </div>
+
+                <div id="new_supplier_input_group" class="form_group" style="display: none; flex-direction: column; gap: 6px;">
+                    <label style="font-size: 13px; font-weight: 700; color: #4f46e5;">New Supplier Name *</label>
+                    <input type="text" id="new_supplier_name_input" placeholder="e.g. Apex Textiles" style="width: 100%; height: 42px; padding: 8px 12px; border: 1.5px solid #818cf8; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; box-sizing: border-box;">
+                </div>
+            </div>
+            <div class="modal_footer" style="display: flex; align-items: center; justify-content: flex-end; gap: 10px; padding: 14px 26px; border-top: 1px solid #e2e8f0; background: #f8fafc;">
+                <button type="button" class="btn_cancel" onclick="closeChangeSupplierModal()">Cancel</button>
+                <button type="button" class="btn_save_modal" id="btn_submit_change_sup" onclick="submitChangeSupplier()">Move All Items</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="supplier_page_container">
+        <!-- TOP NAVIGATION BAR -->
+        <div class="supplier_nav_bar">
+            <a href="http://127.0.0.1:8000/stocks" class="btn_back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                <span>Back to Stocks</span>
+            </a>
+            <div class="supplier_nav_actions">
+                <button type="button" class="btn_edit_sup" onclick="openEditModal()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg>
+                    <span>Edit Details</span>
+                </button>
+                <button type="button" class="btn_del_sup" onclick="confirmDeleteSupplier('1', 'hame', 1)" title="Delete Supplier">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>
+                    <span>Delete Supplier</span>
+                </button>
+                <a href="http://127.0.0.1:8000/add-stock?supplier=1" class="btn_add_inv">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                    <span>Add New Invoice</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- HERO PROFILE BANNER (FULL WIDTH) -->
+        <div class="supplier_hero_card">
+            <div class="supplier_hero_left">
+                <div class="supplier_hero_avatar">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
+                </div>
+                <div class="supplier_hero_info">
+                    <div class="supplier_title_row">
+                        <h1 class="supplier_hero_title" id="display_sup_name">hame</h1>
+                        <span class="supplier_status_badge">
+                            <span class="status_dot"></span>
+                            Active Supplier
+                        </span>
+                    </div>
+                    <div class="supplier_hero_meta">
+                        <span class="meta_badge" id="display_sup_phone">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <span class="meta_text">No phone number</span>
+                        </span>
+                        <span class="meta_badge" id="display_sup_gst">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                            <span class="meta_text">GST: Not Registered</span>
+                        </span>
+                        <span class="meta_badge" id="display_sup_address">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span class="meta_text">No address specified</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STANDALONE 4-COLUMN KPI METRICS (FULL WIDTH GRID) -->
+        <div class="supplier_stats_grid">
+            <div class="stat_metric_card">
+                <div class="stat_metric_top">
+                    <span class="stat_metric_label">Total Invoices</span>
+                    <div class="stat_icon_bubble bubble_blue">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+                    </div>
+                </div>
+                <div class="stat_metric_value">1</div>
+                <span class="stat_metric_sub">1 item received</span>
+            </div>
+
+            <div class="stat_metric_card">
+                <div class="stat_metric_top">
+                    <span class="stat_metric_label">Total Invested (IN)</span>
+                    <div class="stat_icon_bubble bubble_green">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7 7 17"></path><path d="M17 17H7V7"></path></svg>
+                    </div>
+                </div>
+                <div class="stat_metric_value val_in">₹0</div>
+                <span class="stat_metric_sub">Total purchase value</span>
+            </div>
+
+            <div class="stat_metric_card">
+                <div class="stat_metric_top">
+                    <span class="stat_metric_label">Total Sales (OUT)</span>
+                    <div class="stat_icon_bubble bubble_indigo">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
+                    </div>
+                </div>
+                <div class="stat_metric_value val_out">₹17,000</div>
+                <span class="stat_metric_sub">100% revenue realized</span>
+            </div>
+
+            <div class="stat_metric_card">
+                <div class="stat_metric_top">
+                    <span class="stat_metric_label">Sell-Through Rate</span>
+                    <div class="stat_icon_bubble bubble_violet">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                    </div>
+                </div>
+                <div class="stat_metric_value" style="color: #7c3aed;">100%</div>
+                <div class="stat_progress_track">
+                    <div class="stat_progress_fill" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- INVOICES SECTION HEADER (FULL WIDTH) -->
+        <div class="invoices_section_header">
+            <div class="invoices_title_cluster">
+                <h2 class="invoices_section_title">Purchase Invoices</h2>
+                <span class="invoices_count_badge">1</span>
+            </div>
+            <div class="invoices_search_container">
+                <span class="search_input_icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                </span>
+                <input type="text" id="invoiceSearchInput" class="invoices_search_input" placeholder="Search by invoice number or date..." onkeyup="filterInvoices(this.value)">
+                <button type="button" id="invoiceSearchClear" class="invoices_search_clear" style="display: none;" onclick="clearInvoiceSearch()" title="Clear">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- INVOICES LIST CONTAINER (FULL WIDTH) -->
+        <div class="invoices_list_container" id="invoicesList">
+            
+
+            
+            <div class="sup_inv_card opened" data-invoice-id="1" data-invoice-num="2006" data-invoice-date="sep. 22, 2026">
+                <!-- Invoice Row Header (Click to expand items) -->
+                <div class="sup_inv_header" onclick="toggleInvoiceItems(this, '1')">
+                    <div class="sup_inv_main">
+                        <span class="inv_tag_label">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path></svg>
+                            Invoice
+                        </span>
+                        <strong class="inv_num_text">2006</strong>
+                        <span class="inv_date_text">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                            <span class="inv_date_val" id="inv_date_val_1">Sep. 22, 2026</span>
+                            <button type="button" class="btn_edit_inv_date" onclick="event.stopPropagation(); openEditDateModal('1', '2026-09-22', '2006')" title="Edit Invoice Date">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg>
+                            </button>
+                        </span>
+                        <span class="inv_items_pill">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+                            1 item
+                        </span>
+                    </div>
+
+                    <div class="sup_inv_metrics">
+                        <div class="inv_metric_group">
+                            <span class="inv_metric_label">Invested</span>
+                            <span class="metric_pill in" title="Total Invested Amount">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7 7 17"></path><path d="M17 17H7V7"></path></svg>
+                                <span>₹0</span>
+                                <small>IN</small>
+                            </span>
+                        </div>
+                        <div class="inv_metric_group">
+                            <span class="inv_metric_label">Sold</span>
+                            <span class="metric_pill out" title="Total Sales Realized">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"></path><path d="M7 7h10v10"></path></svg>
+                                <span>₹17,000</span>
+                                <small>OUT</small>
+                            </span>
+                        </div>
+                        <div class="inv_metric_group">
+                            <span class="inv_metric_label">Sold %</span>
+                            <span class="metric_pct" title="Percentage of Stock Sold">
+                                100%
+                            </span>
+                        </div>
+                        <div class="inv_actions_group">
+                            <button type="button" class="btn_change_inv_sup" onclick="event.stopPropagation(); openChangeSupplierModal('invoice', '1', 'Invoice 2006 (All 1 item)')" title="Move this invoice and all items to another supplier in one go">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"></path><path d="m8 21-4-4 4-4"></path><path d="M4 17h16"></path></svg>
+                                <span>Move All Items</span>
+                            </button>
+                            <button type="button" class="btn_del_invoice" onclick="event.stopPropagation(); popup('Are you sure you want to delete invoice 2006 and all its stock items?', deletePurchase, '1');" title="Delete invoice">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>
+                            </button>
+                            <span class="sup_inv_chevron">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Invoice Items Drawer (Full Width Level 3 Tabular Data) -->
+                <div class="sup_inv_items_drawer" style="display: block;" id="invoice_drawer_1"><div class="items_component_root"><div class="items_toolbar">
+                <div class="items_toolbar_left">
+                    <button type="button" class="btn_print_barcodes">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 14h12v8H6z"></path></svg>
+                        <span>Print All Barcodes</span>
+                    </button>
+                    <button type="button" class="btn_toolbar_move_all" title="Move entire invoice and all items to another supplier in one go">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"></path><path d="m8 21-4-4 4-4"></path><path d="M4 17h16"></path></svg>
+                        <span>Move All Items</span>
+                    </button>
+                </div>
+                <div class="items_summary_pills">
+                    <span class="summary_pill">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+                        Added: <strong>5</strong>
+                    </span>
+                    <span class="summary_pill">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"></path></svg>
+                        In Stock: <strong>0</strong>
+                    </span>
+                </div></div><div class="items_table_wrapper"><table class="modern_items_table">
+                <thead>
+                    <tr>
+                        <th class="td_checkbox"><input type="checkbox" class="select_all_checkbox" title="Select all"></th>
+                        <th style="min-width: 120px;">Barcode</th>
+                        <th style="min-width: 220px;">Particular / Item</th>
+                        <th style="text-align: center; min-width: 70px;">Size</th>
+                        <th style="min-width: 100px;">HSN/SAC</th>
+                        <th style="text-align: center; min-width: 100px;">Stock Left</th>
+                        <th style="text-align: center; min-width: 90px;">Qty Added</th>
+                        <th style="text-align: right; min-width: 110px;">Buy Price</th>
+                        <th style="text-align: right; min-width: 110px;">Sell Price</th>
+                        <th style="text-align: center; min-width: 90px;">Discount</th>
+                        <th style="text-align: right; min-width: 120px;">Final Price</th>
+                        <th style="text-align: right; min-width: 185px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody><tr data-id="1">
+                    <td class="td_checkbox">
+                        <input type="checkbox" class="item_checkbox">
+                    </td>
+                    <td>
+                        <span class="barcode_badge" data-code="SBSIR1" title="Click to print single barcode">
+                            SBSIR1
+                        </span>
+                    </td>
+                    <td class="item_particular enableedit" data-name="particular" title="silk">silk</td>
+                    <td style="text-align: center;"><span class="item_size_badge enableedit" data-name="size">R</span></td>
+                    <td class="enableedit" data-name="hsn" style="font-family: var(--sd-font-mono); font-size: 12.5px; color: #64748b;">573201</td>
+                    <td style="text-align: center;"><span class="qty_left_pill out_stock enableedit" data-name="qnty">0</span></td>
+                    <td style="text-align: center; font-weight: 600;" class="enableedit" data-name="qntyleft">5</td>
+                    <td style="text-align: right;" class="price_text enableedit" data-name="incprice">₹0.00</td>
+                    <td style="text-align: right;" class="price_text enableedit" data-name="sellprice">₹4255.00</td>
+                    <td style="text-align: center;" class="enableedit" data-name="discount">20%</td>
+                    <td style="text-align: right;" class="final_price_cell">₹3,400</td>
+                    <td class="td_actions">
+                        <button type="button" class="btn_table_action btn_move_item" title="Move item to another supplier">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"></path><path d="m8 21-4-4 4-4"></path><path d="M4 17h16"></path></svg>
+                            <span>Move</span>
+                        </button>
+                        <button type="button" class="btn_table_action btn_edit">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path><path d="m15 5 4 4"></path></svg>
+                            <span>Edit</span>
+                        </button>
+                        <button type="button" class="btn_table_action btn_save" style="display: none;">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Save</span>
+                        </button>
+                        <button type="button" class="btn_table_action btn_delete_item" title="Delete this item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>
+                            <span>Delete</span>
+                        </button>
+                    </td></tr></tbody></table></div></div></div>
+            </div>
+            
+        </div>
+    </main>
+
+    <script>
+        function indianCurrency(value) {
+            value = parseInt(value);
+            return value.toLocaleString('en-IN', {
+                maximumFractionDigits: 0,
+                style: 'currency',
+                currency: 'INR',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 2,
+            });
+        }
+
+        function finalAmt(sellPriceStr, discountStr) {
+            const sellPrice = parseFloat(sellPriceStr);
+            const discount = parseFloat(discountStr);
+            if (isNaN(sellPrice) || isNaN(discount)) return '₹0';
+            let discountedPrice = sellPrice - (sellPrice * discount / 100);
+            let roundedPrice = Math.floor(discountedPrice / 10) * 10;
+            return indianCurrency(roundedPrice);
+        }
+
+        let selected_item = [];
+        let selected_ele = [];
+
+        function confirmDeletePi() {
+            const fd = new FormData();
+            fd.append('csrfmiddlewaretoken', 'fOcozh7k1E8Pbng5pvR1GUfoU76lDjHNQWyJci0eAvw8wbJOqLzRKMIi9JKmDkf2');
+            fd.append('deleteItems', JSON.stringify({ selected_item }));
+            fetch(`/delete_purchase_item`, {
+                method: 'POST',
+                body: fd,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status == 'success') {
+                        selected_ele.forEach(el => el.remove());
+                        selected_item = [];
+                        selected_ele = [];
+                        popup('Selected items deleted successfully');
+                    } else {
+                        popup('Error occurred while deleting items');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    popup('Failed to communicate with server');
+                });
+        }
+
+        function deleteBtnToggle(container) {
+            selected_item = [];
+            selected_ele = [];
+            container.querySelectorAll('tbody tr input.item_checkbox:checked').forEach(cb => {
+                const tr = cb.closest('tr');
+                if (tr && tr.dataset.id) {
+                    selected_item.push(tr.dataset.id);
+                    selected_ele.push(tr);
+                }
+            });
+
+            const toolbarLeft = container.querySelector('.items_toolbar_left');
+            let dltBtn = toolbarLeft ? toolbarLeft.querySelector('.btn_delete_selected') : null;
+            let moveSelBtn = toolbarLeft ? toolbarLeft.querySelector('.btn_move_selected') : null;
+
+            if (selected_item.length > 0) {
+                if (!moveSelBtn && toolbarLeft) {
+                    moveSelBtn = document.createElement('button');
+                    moveSelBtn.type = 'button';
+                    moveSelBtn.className = 'btn_move_selected';
+                    moveSelBtn.innerHTML = `
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+                        <span>Move Selected (${selected_item.length})</span>`;
+                    toolbarLeft.appendChild(moveSelBtn);
+                    moveSelBtn.addEventListener('click', () => {
+                        openChangeSupplierModal('bulk_items', [...selected_item], `${selected_item.length} Selected Items`);
+                    });
+                } else if (moveSelBtn) {
+                    moveSelBtn.querySelector('span').textContent = `Move Selected (${selected_item.length})`;
+                }
+
+                if (!dltBtn && toolbarLeft) {
+                    dltBtn = document.createElement('button');
+                    dltBtn.type = 'button';
+                    dltBtn.className = 'btn_delete_selected';
+                    dltBtn.innerHTML = `
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                        <span>Delete Selected (${selected_item.length})</span>`;
+                    toolbarLeft.appendChild(dltBtn);
+                    dltBtn.addEventListener('click', () => {
+                        popup(`Are you sure you want to delete ${selected_item.length} selected item(s)?`, confirmDeletePi);
+                    });
+                } else if (dltBtn) {
+                    dltBtn.querySelector('span').textContent = `Delete Selected (${selected_item.length})`;
+                }
+            } else {
+                if (dltBtn) dltBtn.remove();
+                if (moveSelBtn) moveSelBtn.remove();
+            }
+        }
+
+        function deletePurchase(id) {
+            const fd = new FormData();
+            fd.append('csrfmiddlewaretoken', 'fOcozh7k1E8Pbng5pvR1GUfoU76lDjHNQWyJci0eAvw8wbJOqLzRKMIi9JKmDkf2');
+            fd.append('purchaseid', id);
+            fetch(`/delete-purchase-id`, {
+                method: 'POST',
+                body: fd,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    location.reload();
+                })
+                .catch(error => {
+                    location.reload();
+                });
+        }
+
+        // Toggle invoice items expansion
+        function toggleInvoiceItems(headerEl, purchaseId) {
+            const card = headerEl.closest('.sup_inv_card');
+            const drawer = card.querySelector('.sup_inv_items_drawer');
+            if (card.classList.contains('opened')) {
+                card.classList.remove('opened');
+                drawer.style.display = 'none';
+                return;
+            }
+
+            card.classList.add('opened');
+            drawer.style.display = 'block';
+
+            if (drawer.children.length === 0) {
+                drawer.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center; padding: 32px; gap: 12px; color: #64748b;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="animation: spin 1s linear infinite;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                        <span style="font-size: 14px; font-weight: 500;">Loading purchased items...</span>
+                    </div>
+                    <style>@keyframes spin { 100% { transform: rotate(360deg); } }</style>`;
+                
+                fetch(`/get-purchase-items/${purchaseId}`)
+                    .then(res => {
+                        if (!res.ok) throw new Error('Network error');
+                        return res.json();
+                    })
+                    .then(data => {
+                        drawer.innerHTML = '';
+                        renderItemsTable(data.data, drawer, purchaseId);
+                    })
+                    .catch(err => {
+                        console.error('Fetch error:', err);
+                        drawer.innerHTML = '<p style="padding: 18px; color: #dc2626; font-size: 13.5px; text-align: center;">Failed to load items. Please try again.</p>';
+                    });
+            }
+        }
+
+        // Render full-width modern tabular items data
+        function renderItemsTable(data, container, purchaseId) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'items_component_root';
+
+            let qty = 0;
+            let qtyleft = 0;
+            data.forEach(d => {
+                qty += parseInt(d.quantityGet) || 0;
+                qtyleft += parseInt(d.quantity) || 0;
+            });
+
+            // Toolbar
+            const toolbar = document.createElement('div');
+            toolbar.className = 'items_toolbar';
+            toolbar.innerHTML = `
+                <div class="items_toolbar_left">
+                    <button type="button" class="btn_print_barcodes">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+                        <span>Print All Barcodes</span>
+                    </button>
+                    <button type="button" class="btn_toolbar_move_all" title="Move entire invoice and all items to another supplier in one go">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+                        <span>Move All Items</span>
+                    </button>
+                </div>
+                <div class="items_summary_pills">
+                    <span class="summary_pill">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+                        Added: <strong>${qty}</strong>
+                    </span>
+                    <span class="summary_pill">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 5 5L20 7"/></svg>
+                        In Stock: <strong>${qtyleft}</strong>
+                    </span>
+                </div>`;
+
+            // Move all items event
+            toolbar.querySelector('.btn_toolbar_move_all').addEventListener('click', () => {
+                const card = container.closest('.sup_inv_card');
+                const invNum = card ? (card.dataset.invoiceNum || purchaseId) : purchaseId;
+                openChangeSupplierModal('invoice', purchaseId, `Invoice ${invNum.toUpperCase()} (All ${data.length} item${data.length === 1 ? '' : 's'})`);
+            });
+
+            // Print all barcodes event
+            toolbar.querySelector('.btn_print_barcodes').addEventListener('click', () => {
+                fetch(`/barcode-print-purchases/${purchaseId}`)
+                    .then(response => {
+                        if (!response.ok) throw new Error('Network error');
+                        return response.json();
+                    })
+                    .then(data => {
+                        let printWindow = window.open("", "_blank", "width=800,height=600,top=100,left=100,resizable=yes,scrollbars=yes");
+                        if (printWindow) {
+                            printWindow.document.open();
+                            printWindow.document.write(data.html);
+                            printWindow.document.close();
+                        } else {
+                            popup("Popup blocked! Please allow popups to print barcodes.");
+                        }
+                    })
+                    .catch(err => {
+                        console.error('Fetch error:', err);
+                        popup('Failed to fetch barcode print sheet');
+                    });
+            });
+
+            // Table Wrapper (Full Width)
+            const tableWrap = document.createElement('div');
+            tableWrap.className = 'items_table_wrapper';
+
+            const table = document.createElement('table');
+            table.className = 'modern_items_table';
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th class="td_checkbox"><input type="checkbox" class="select_all_checkbox" title="Select all"></th>
+                        <th style="min-width: 120px;">Barcode</th>
+                        <th style="min-width: 220px;">Particular / Item</th>
+                        <th style="text-align: center; min-width: 70px;">Size</th>
+                        <th style="min-width: 100px;">HSN/SAC</th>
+                        <th style="text-align: center; min-width: 100px;">Stock Left</th>
+                        <th style="text-align: center; min-width: 90px;">Qty Added</th>
+                        <th style="text-align: right; min-width: 110px;">Buy Price</th>
+                        <th style="text-align: right; min-width: 110px;">Sell Price</th>
+                        <th style="text-align: center; min-width: 90px;">Discount</th>
+                        <th style="text-align: right; min-width: 120px;">Final Price</th>
+                        <th style="text-align: right; min-width: 185px;">Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>`;
+
+            const tbody = table.querySelector('tbody');
+
+            data.forEach(d => {
+                const tr = document.createElement('tr');
+                tr.dataset.id = d["id"];
+
+                const qLeft = parseInt(d['quantity']) || 0;
+                let stockClass = 'in_stock';
+                if (qLeft <= 0) stockClass = 'out_stock';
+                else if (qLeft <= 2) stockClass = 'low_stock';
+
+                tr.innerHTML = `
+                    <td class="td_checkbox">
+                        <input type="checkbox" class="item_checkbox">
+                    </td>
+                    <td>
+                        <span class="barcode_badge" data-code="${d['barcode']}" title="Click to print single barcode">
+                            ${d['barcode']}
+                        </span>
+                    </td>
+                    <td class="item_particular enableedit" data-name="particular" title="${d['catogory']}">${d['catogory']}</td>
+                    <td style="text-align: center;"><span class="item_size_badge enableedit" data-name="size">${d['size'] || '-'}</span></td>
+                    <td class="enableedit" data-name="hsn" style="font-family: var(--sd-font-mono); font-size: 12.5px; color: #64748b;">${d['hsn_sac'] || '-'}</td>
+                    <td style="text-align: center;"><span class="qty_left_pill ${stockClass} enableedit" data-name="qnty">${d['quantity']}</span></td>
+                    <td style="text-align: center; font-weight: 600;" class="enableedit" data-name="qntyleft">${d['quantityGet']}</td>
+                    <td style="text-align: right;" class="price_text enableedit" data-name="incprice">₹${parseFloat(d['incomPrice'] || 0).toFixed(2)}</td>
+                    <td style="text-align: right;" class="price_text enableedit" data-name="sellprice">₹${parseFloat(d['sellprice'] || 0).toFixed(2)}</td>
+                    <td style="text-align: center;" class="enableedit" data-name="discount">${d['discount']}%</td>
+                    <td style="text-align: right;" class="final_price_cell">${finalAmt(d['sellprice'], d['discount'])}</td>
+                    <td class="td_actions">
+                        <button type="button" class="btn_table_action btn_move_item" title="Move item to another supplier">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+                            <span>Move</span>
+                        </button>
+                        <button type="button" class="btn_table_action btn_edit">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+                            <span>Edit</span>
+                        </button>
+                        <button type="button" class="btn_table_action btn_save" style="display: none;">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>Save</span>
+                        </button>
+                        <button type="button" class="btn_table_action btn_delete_item" title="Delete this item">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>
+                            <span>Delete</span>
+                        </button>
+                    </td>`;
+
+                // Single item barcode print
+                tr.querySelector('.barcode_badge').addEventListener('click', () => {
+                    fetch(`/barcode-print-item/${d["id"]}`)
+                        .then(response => {
+                            if (!response.ok) throw new Error('Network error');
+                            return response.json();
+                        })
+                        .then(data => {
+                            let printWindow = window.open("", "_blank", "width=800,height=600,top=100,left=100,resizable=yes,scrollbars=yes");
+                            if (printWindow) {
+                                printWindow.document.open();
+                                printWindow.document.write(data.html);
+                                printWindow.document.close();
+                            } else {
+                                popup("Popup blocked! Please allow popups.");
+                            }
+                        })
+                        .catch(err => {
+                            console.error('Fetch error:', err);
+                            popup('Failed to generate barcode print sheet');
+                        });
+                });
+
+                // Row selection checkbox
+                const cb = tr.querySelector('.item_checkbox');
+                cb.addEventListener('change', () => {
+                    tr.classList.toggle('row_selected', cb.checked);
+                    deleteBtnToggle(wrapper);
+                });
+
+                // Edit & Save handlers
+                const editBtn = tr.querySelector('.btn_edit');
+                const saveBtn = tr.querySelector('.btn_save');
+
+                editBtn.addEventListener('click', () => {
+                    editBtn.style.display = 'none';
+                    saveBtn.style.display = 'inline-flex';
+
+                    tr.querySelectorAll('.enableedit').forEach(el => {
+                        el.setAttribute('contenteditable', 'true');
+                    });
+                });
+
+                saveBtn.addEventListener('click', () => {
+                    const fd = new FormData();
+                    fd.append('csrfmiddlewaretoken', 'fOcozh7k1E8Pbng5pvR1GUfoU76lDjHNQWyJci0eAvw8wbJOqLzRKMIi9JKmDkf2');
+                    tr.querySelectorAll('.enableedit').forEach(p => {
+                        let val = p.textContent.replace('₹', '').replace('%', '').trim();
+                        fd.append(p.dataset.name, val);
+                    });
+
+                    fetch(`/save-purchase-item-edit/${d["id"]}`, {
+                        method: 'POST',
+                        body: fd,
+                    })
+                        .then(res => res.json())
+                        .then(resp => {
+                            if (resp.status == 200) {
+                                editBtn.style.display = 'inline-flex';
+                                saveBtn.style.display = 'none';
+                                tr.querySelectorAll('.enableedit').forEach(el => {
+                                    el.removeAttribute('contenteditable');
+                                });
+                                const sellp = tr.querySelector('[data-name="sellprice"]').textContent.replace('₹', '').trim();
+                                const discp = tr.querySelector('[data-name="discount"]').textContent.replace('%', '').trim();
+                                tr.querySelector('.final_price_cell').textContent = finalAmt(sellp, discp);
+                                popup('Item updated successfully');
+                            } else {
+                                popup('Failed to save item changes');
+                            }
+                        })
+                        .catch(err => {
+                            console.error('Error:', err);
+                            popup('Network error while saving item');
+                        });
+                });
+
+                // Move single item handler
+                const moveItemBtn = tr.querySelector('.btn_move_item');
+                if (moveItemBtn) {
+                    moveItemBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const itemDesc = (d['catogory'] || 'Item') + ' (' + (d['barcode'] || '') + ')';
+                        openChangeSupplierModal('item', d['id'], itemDesc);
+                    });
+                }
+
+                // Delete single item handler
+                const deleteItemBtn = tr.querySelector('.btn_delete_item');
+                if (deleteItemBtn) {
+                    deleteItemBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const itemDesc = d['catogory'] || d['barcode'] || 'this item';
+                        popup(`Are you sure you want to delete ${itemDesc} (${d['barcode']})?`, () => {
+                            deleteSingleItem(d['id'], tr, wrapper, purchaseId);
+                        });
+                    });
+                }
+
+                tbody.appendChild(tr);
+            });
+
+            // Select all checkbox
+            const selectAllCb = table.querySelector('.select_all_checkbox');
+            selectAllCb.addEventListener('change', () => {
+                const isChecked = selectAllCb.checked;
+                tbody.querySelectorAll('.item_checkbox').forEach(cb => {
+                    cb.checked = isChecked;
+                    cb.closest('tr').classList.toggle('row_selected', isChecked);
+                });
+                deleteBtnToggle(wrapper);
+            });
+
+            tableWrap.appendChild(table);
+            wrapper.appendChild(toolbar);
+            wrapper.appendChild(tableWrap);
+
+            container.innerHTML = '';
+            container.appendChild(wrapper);
+        }
+
+        // Live invoice filter
+        function filterInvoices(query) {
+            const q = query.toLowerCase().trim();
+            const clearBtn = document.getElementById('invoiceSearchClear');
+            if (clearBtn) {
+                clearBtn.style.display = q ? 'flex' : 'none';
+            }
+
+            document.querySelectorAll('.sup_inv_card').forEach(card => {
+                const invNum = card.dataset.invoiceNum || '';
+                const invDate = card.dataset.invoiceDate || '';
+                const text = card.textContent.toLowerCase();
+                card.style.display = (!q || invNum.includes(q) || invDate.includes(q) || text.includes(q)) ? '' : 'none';
+            });
+        }
+
+        function clearInvoiceSearch() {
+            const inp = document.getElementById('invoiceSearchInput');
+            if (inp) {
+                inp.value = '';
+                filterInvoices('');
+                inp.focus();
+            }
+        }
+
+        // Edit Supplier Modal Handlers
+        function openEditModal() {
+            document.getElementById('editSupplierModal').style.display = 'flex';
+        }
+
+        function closeEditModal() {
+            document.getElementById('editSupplierModal').style.display = 'none';
+        }
+
+        function saveSupplierDetails() {
+            const name = document.getElementById('edit_sup_name').value.trim();
+            const phone = document.getElementById('edit_sup_phone').value.trim();
+            const gst = document.getElementById('edit_sup_gst').value.trim();
+            const address = document.getElementById('edit_sup_address').value.trim();
+
+            if (!name) {
+                popup('Supplier name is required.');
+                return;
+            }
+
+            const fd = new FormData();
+            fd.append('csrfmiddlewaretoken', 'fOcozh7k1E8Pbng5pvR1GUfoU76lDjHNQWyJci0eAvw8wbJOqLzRKMIi9JKmDkf2');
+            fd.append('name', name);
+            fd.append('phone', phone);
+            fd.append('gst', gst);
+            fd.append('address', address);
+
+            fetch('/api/suppliers/1/update', {
+                method: 'POST',
+                body: fd
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        document.getElementById('display_sup_name').textContent = data.supplier.name;
+                        document.querySelector('#display_sup_phone .meta_text').textContent = data.supplier.phone || 'No phone number';
+                        document.querySelector('#display_sup_gst .meta_text').textContent = 'GST: ' + (data.supplier.gst || 'Not Registered');
+                        document.querySelector('#display_sup_address .meta_text').textContent = data.supplier.address || 'No address specified';
+                        closeEditModal();
+                        popup('Supplier details updated successfully');
+                    } else {
+                        popup(data.message || 'Error updating supplier');
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    popup('Network error while updating supplier');
+                });
+        }
+
+        // Edit Invoice Date Modal Handlers
+        function openEditDateModal(purchaseId, rawDate, invoiceNum) {
+            document.getElementById('edit_date_purchase_id').value = purchaseId;
+            document.getElementById('edit_date_invoice_num_display').textContent = invoiceNum || 'Invoice #' + purchaseId;
+            document.getElementById('edit_date_input').value = rawDate || '';
+            document.getElementById('editInvoiceDateModal').style.display = 'flex';
+        }
+
+        function closeEditDateModal() {
+            document.getElementById('editInvoiceDateModal').style.display = 'none';
+        }
+
+        function submitEditDateForm() {
+            const purchaseId = document.getElementById('edit_date_purchase_id').value;
+            const newDate = document.getElementById('edit_date_input').value;
+            if (!newDate) {
+                alert('Please select a valid date');
+                return;
+            }
+
+            const btn = document.getElementById('edit_date_submit_btn');
+            btn.disabled = true;
+            btn.textContent = 'Updating...';
+
+            const fd = new FormData();
+            fd.append('csrfmiddlewaretoken', 'fOcozh7k1E8Pbng5pvR1GUfoU76lDjHNQWyJci0eAvw8wbJOqLzRKMIi9JKmDkf2');
+            fd.append('date', newDate);
+
+            fetch(`/api/invoices/${purchaseId}/update-date`, {
+                method: 'POST',
+                body: fd
+            })
+            .then(res => res.json())
+            .then(data => {
+                btn.disabled = false;
+                btn.textContent = 'Update Date';
+                if (data.status === 'success') {
+                    const dateEl = document.getElementById(`inv_date_val_${purchaseId}`);
+                    if (dateEl) dateEl.textContent = data.date;
+
+                    const card = document.querySelector(`.sup_inv_card[data-invoice-id="${purchaseId}"]`);
+                    if (card) {
+                        card.dataset.invoiceDate = data.date.toLowerCase();
+                        const editBtn = card.querySelector('.btn_edit_inv_date');
+                        if (editBtn) {
+                            editBtn.setAttribute('onclick', `event.stopPropagation(); openEditDateModal('${purchaseId}', '${data.raw_date}', '${card.dataset.invoiceNum}')`);
+                        }
+                    }
+                    closeEditDateModal();
+                    popup('Invoice date updated to ' + data.date);
+                } else {
+                    alert(data.message || 'Error updating date');
+                }
+            })
+            .catch(err => {
+                btn.disabled = false;
+                btn.textContent = 'Update Date';
+                console.error(err);
+                alert('Failed to update invoice date');
+            });
+        }
+
+        // Single Item Delete Handler
+        function deleteSingleItem(itemId, tr, wrapper, purchaseId) {
+            const fd = new FormData();
+            fd.append('csrfmiddlewaretoken', 'fOcozh7k1E8Pbng5pvR1GUfoU76lDjHNQWyJci0eAvw8wbJOqLzRKMIi9JKmDkf2');
+            fd.append('item_id', itemId);
+
+            fetch('/delete_purchase_item', {
+                method: 'POST',
+                body: fd
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    tr.remove();
+                    popup('Item deleted successfully');
+
+                    // Recalculate summary pills
+                    let newQty = 0;
+                    let newQtyLeft = 0;
+                    const remainingRows = wrapper.querySelectorAll('tbody tr');
+                    remainingRows.forEach(row => {
+                        const qPill = row.querySelector('.qty_left_pill');
+                        const qAdd = row.querySelector('[data-name="qntyleft"]');
+                        if (qPill) newQtyLeft += parseInt(qPill.textContent) || 0;
+                        if (qAdd) newQty += parseInt(qAdd.textContent) || 0;
+                    });
+
+                    // Update toolbar pills
+                    const pills = wrapper.querySelectorAll('.items_summary_pills .summary_pill strong');
+                    if (pills[0]) pills[0].textContent = newQty;
+                    if (pills[1]) pills[1].textContent = newQtyLeft;
+
+                    // Update invoice card items count pill
+                    const card = document.querySelector(`.sup_inv_card[data-invoice-id="${purchaseId}"]`);
+                    if (card) {
+                        const countPill = card.querySelector('.inv_items_pill');
+                        if (countPill) {
+                            countPill.innerHTML = `
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+                                ${remainingRows.length} item${remainingRows.length === 1 ? '' : 's'}`;
+                        }
+                    }
+
+                    if (remainingRows.length === 0) {
+                        wrapper.querySelector('tbody').innerHTML = `
+                            <tr><td colspan="12" style="text-align: center; color: #94a3b8; padding: 24px;">No items remaining in this invoice.</td></tr>`;
+                    }
+                } else {
+                    popup('Error deleting item: ' + (data.message || ''));
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                popup('Network error while deleting item');
+            });
+        }
+
+        // Safe Supplier Deletion Handlers
+        function confirmDeleteSupplier(id, name, invoiceCount) {
+            if (invoiceCount > 0) {
+                popup(`Cannot delete supplier "${name}".\n\nThis supplier has ${invoiceCount} purchase invoice(s) / related stock items linked to it.\n\nTo prevent data loss, suppliers with existing invoices or stock cannot be deleted. Please reassign or delete their invoices/items first.`);
+                return;
+            }
+
+            popup(`Are you sure you want to delete supplier "${name}"? This supplier has no related invoices or stock items.`, () => {
+                executeDeleteSupplier(id);
+            }, id);
+        }
+
+        function executeDeleteSupplier(id) {
+            const fd = new FormData();
+            fd.append('csrfmiddlewaretoken', 'fOcozh7k1E8Pbng5pvR1GUfoU76lDjHNQWyJci0eAvw8wbJOqLzRKMIi9JKmDkf2');
+
+            fetch(`/api/suppliers/${id}/delete`, {
+                method: 'POST',
+                body: fd
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    window.location.href = '/stocks';
+                } else {
+                    popup(data.message || 'Error deleting supplier.');
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                popup('Network error while deleting supplier.');
+            });
+        }
+
+        // Change Supplier (Move Invoice or Move Item) Handlers
+        let currentMoveType = 'invoice'; // 'invoice' | 'item'
+        let currentMoveTargetId = null;
+
+        function openChangeSupplierModal(type, targetId, displayLabel) {
+            currentMoveType = type;
+            currentMoveTargetId = targetId;
+
+            const titleEl = document.getElementById('change_sup_modal_title');
+            const descEl = document.getElementById('change_sup_target_desc');
+            const badgeEl = document.getElementById('change_sup_modal_badge');
+            const noteEl = document.getElementById('change_sup_sub_note');
+            const submitBtn = document.getElementById('btn_submit_change_sup');
+
+            if (type === 'invoice') {
+                if (titleEl) {
+                    titleEl.innerHTML = `
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+                        Move Invoice (All Items in One Go)`;
+                }
+                if (badgeEl) badgeEl.textContent = 'MOVING ENTIRE INVOICE';
+                if (noteEl) noteEl.textContent = 'All items in this invoice will be transferred to the target supplier in one go.';
+                if (submitBtn) submitBtn.textContent = 'Move All Items';
+            } else if (type === 'bulk_items') {
+                if (titleEl) {
+                    titleEl.innerHTML = `
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+                        Move Selected Items in One Go`;
+                }
+                if (badgeEl) badgeEl.textContent = 'MOVING SELECTED ITEMS';
+                if (noteEl) noteEl.textContent = 'All selected items will be transferred to the target supplier in one go.';
+                if (submitBtn) submitBtn.textContent = 'Move Selected Items';
+            } else {
+                if (titleEl) {
+                    titleEl.innerHTML = `
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+                        Move Item to Supplier`;
+                }
+                if (badgeEl) badgeEl.textContent = 'MOVING SINGLE ITEM';
+                if (noteEl) noteEl.textContent = 'This stock item will be transferred to the selected supplier.';
+                if (submitBtn) submitBtn.textContent = 'Move Item';
+            }
+
+            if (descEl) {
+                descEl.textContent = displayLabel;
+            }
+
+            const selectEl = document.getElementById('target_supplier_select');
+            if (selectEl) selectEl.value = '';
+            const newGrp = document.getElementById('new_supplier_input_group');
+            if (newGrp) newGrp.style.display = 'none';
+            const newNameInp = document.getElementById('new_supplier_name_input');
+            if (newNameInp) newNameInp.value = '';
+
+            const modal = document.getElementById('changeSupplierModal');
+            if (modal) modal.style.display = 'flex';
+        }
+
+        function closeChangeSupplierModal() {
+            const modal = document.getElementById('changeSupplierModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        function onTargetSupplierChange() {
+            const selectEl = document.getElementById('target_supplier_select');
+            const newGrp = document.getElementById('new_supplier_input_group');
+            if (selectEl.value === '__new__') {
+                newGrp.style.display = 'flex';
+                document.getElementById('new_supplier_name_input').focus();
+            } else {
+                newGrp.style.display = 'none';
+            }
+        }
+
+        function submitChangeSupplier() {
+            const selectEl = document.getElementById('target_supplier_select');
+            const targetId = selectEl.value;
+            const newName = document.getElementById('new_supplier_name_input').value.trim();
+
+            if (!targetId) {
+                popup('Please select a target supplier or create a new one.');
+                return;
+            }
+            if (targetId === '__new__' && !newName) {
+                popup('Please enter the new supplier name.');
+                return;
+            }
+
+            const submitBtn = document.getElementById('btn_submit_change_sup');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Moving...';
+
+            const fd = new FormData();
+            fd.append('csrfmiddlewaretoken', 'fOcozh7k1E8Pbng5pvR1GUfoU76lDjHNQWyJci0eAvw8wbJOqLzRKMIi9JKmDkf2');
+            if (targetId === '__new__') {
+                fd.append('new_supplier_name', newName);
+            } else {
+                fd.append('target_supplier_id', targetId);
+            }
+
+            let url = '';
+            if (currentMoveType === 'invoice') {
+                url = `/api/invoices/${currentMoveTargetId}/change-supplier`;
+            } else if (currentMoveType === 'bulk_items') {
+                url = `/api/items/bulk-change-supplier`;
+                fd.append('item_ids', JSON.stringify(currentMoveTargetId));
+            } else {
+                url = `/api/items/${currentMoveTargetId}/change-supplier`;
+            }
+
+            fetch(url, {
+                method: 'POST',
+                body: fd
+            })
+            .then(res => res.json())
+            .then(data => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Confirm & Move';
+                if (data.status === 'success') {
+                    closeChangeSupplierModal();
+                    popup(data.message, () => {
+                        location.reload();
+                    });
+                    setTimeout(() => { location.reload(); }, 1200);
+                } else {
+                    popup(data.message || 'Error changing supplier');
+                }
+            })
+            .catch(err => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Confirm & Move';
+                console.error(err);
+                popup('Network error while moving to supplier.');
+            });
+        }
+
+        // Auto-expand invoice and highlight barcode if passed via query params (e.g. from Barcode Lookup)
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const targetInvoice = params.get('invoice');
+            const targetBarcode = params.get('barcode');
+
+            if (targetInvoice) {
+                const invCard = document.querySelector(`.sup_inv_card[data-invoice-id="${targetInvoice}"]`);
+                if (invCard) {
+                    setTimeout(() => {
+                        invCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 200);
+
+                    const header = invCard.querySelector('.sup_inv_header');
+                    if (header && !invCard.classList.contains('opened')) {
+                        toggleInvoiceItems(header, targetInvoice);
+                    }
+
+                    if (targetBarcode) {
+                        let attempts = 0;
+                        const pollInterval = setInterval(() => {
+                            attempts++;
+                            const badge = invCard.querySelector(`.barcode_badge[data-code="${targetBarcode}"]`);
+                            if (badge) {
+                                clearInterval(pollInterval);
+                                const row = badge.closest('tr');
+                                if (row) {
+                                    row.classList.add('barcode_highlight_row');
+                                    setTimeout(() => {
+                                        row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    }, 150);
+                                }
+                            } else if (attempts > 40) {
+                                clearInterval(pollInterval);
+                            }
+                        }, 100);
+                    }
+                }
+            }
+        });
+    </script>
+
+
+
+</body></html>
